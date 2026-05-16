@@ -381,7 +381,7 @@ function useStructuredData(language: LanguageCode) {
 }
 
 export default function Home() {
-  const { language, setLanguage } = useLanguageStore();
+  const { language, setLanguage, geoDetected, detectLanguageFromGeo } = useLanguageStore();
   const t = getTranslation(language);
   const { toast } = useToast();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -393,6 +393,24 @@ export default function Home() {
     company: '',
     message: '',
   });
+
+  // URL ?lang= parameter takes highest priority (for shared links / hreflang)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const langParam = params.get('lang') as LanguageCode | null;
+    if (langParam && ['de', 'sr', 'en', 'ro', 'bg', 'fr', 'it'].includes(langParam)) {
+      setLanguage(langParam);
+      // Clean up URL without reloading
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, [setLanguage]);
+
+  // Detect language from visitor's IP geolocation (only on first visit, if no URL param)
+  useEffect(() => {
+    if (!geoDetected) {
+      detectLanguageFromGeo();
+    }
+  }, [geoDetected, detectLanguageFromGeo]);
 
   // Apply dynamic SEO head tags
   useSeoHead(language);
