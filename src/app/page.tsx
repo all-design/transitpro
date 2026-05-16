@@ -223,16 +223,14 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Mobile language selector */}
-              <div className="sm:hidden">
-                <button
-                  onClick={() => setLanguage(language)}
-                  className="px-2 py-1 rounded-md text-lg bg-gray-50 hover:bg-gray-100"
-                  title={t.navContact}
-                >
-                  <CountryFlag countryCode={languageCountryCodes[lang.code]} />
-                </button>
-              </div>
+              {/* Mobile language selector - opens mobile menu with language options */}
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className="sm:hidden px-2 py-1 rounded-md text-lg bg-gray-50 hover:bg-gray-100"
+                title={t.navContact}
+              >
+                <CountryFlag countryCode={languageCountryCodes[language]} />
+              </button>
 
               <Button
                 variant="ghost"
