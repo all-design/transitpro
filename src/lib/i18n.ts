@@ -124,6 +124,10 @@ export type TranslationKeys = {
   faq6A: string;
   faq7Q: string;
   faq7A: string;
+  faq8Q: string;
+  faq8A: string;
+  faq9Q: string;
+  faq9A: string;
 
   // CTA
   ctaTitle: string;
@@ -160,7 +164,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
 
     // Hero
     heroTitle: 'Österreichische Transitkennzeichen',
-    heroSubtitle: 'Schnell, zuverlässig und professionell — besorgen Sie sich Transitkennzeichen mit WA-Versicherung für Ihr Fahrzeug. Fahren Sie legal von A nach B durch Österreich.',
+    heroSubtitle: 'Schnell, zuverlässig und professionell — besorgen Sie sich Transitkennzeichen mit WA-Versicherung für Ihr Fahrzeug. Fahren Sie legal von A nach B durch die EU und viele weitere Länder.',
     heroCta: 'Angebot anfordern',
     heroSecondaryCta: 'Mehr erfahren',
 
@@ -170,7 +174,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'Für Fahrzeuge, die über kein gültiges Kennzeichen oder keine gültige TÜV-Bescheinigung verfügen, können Sie die österreichische Ausfuhrgenehmigung nutzen, auch bekannt als österreichische Transitkennzeichen.',
     aboutDescription2: 'Diese vorübergehenden Kennzeichen werden mit einer vorübergehenden WA-Versicherung geliefert und sind für Fahrzeuge bestimmt, die exportiert und auf der Straße ins Bestimmungsland gefahren werden.',
     aboutDescription3: 'Hinweis: Anträge sind ausschließlich für Unternehmen möglich.',
-    aboutDescription4: 'Diese Kennzeichen sind ausschließlich für eine Fahrt von A nach B, von oder nach Österreich bestimmt. Eine Zulassung in einem anderen Land ist mit diesen Kennzeichen nicht möglich — dafür sind die originalen Fahrzeugpapiere erforderlich.',
+    aboutDescription4: 'Diese Kennzeichen sind für eine Fahrt von A nach B bestimmt, wobei die Route durch EU-Länder und andere europäische Staaten führen kann. Eine Zulassung in einem anderen Land ist mit diesen Kennzeichen nicht möglich — dafür sind die originalen Fahrzeugpapiere erforderlich.',
     aboutDescription5: 'Eine gültige TÜV-Bescheinigung ist für die Ausstellung dieser Kennzeichen nicht erforderlich. Die Verantwortung für die Sicherheit und den technischen Zustand des Fahrzeugs während der Fahrt liegt stets beim Käufer bzw. Fahrer.',
 
     // Benefits
@@ -183,7 +187,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Kein TÜV erforderlich',
     benefit3Desc: 'Für die Ausstellung der Transitkennzeichen ist keine gültige TÜV-Bescheinigung erforderlich, was den Prozess für ältere Fahrzeuge erleichtert.',
     benefit4Title: 'Legales Fahren',
-    benefit4Desc: 'Fahren Sie völlig legal durch Österreich und Europa mit gültigen Transitkennzeichen und Dokumenten.',
+    benefit4Desc: 'Fahren Sie völlig legal durch die EU und Europa mit gültigen Transitkennzeichen und Dokumenten.',
     benefit5Title: 'Engagierter Support',
     benefit5Desc: 'Unser Expertenteam steht Ihnen bei allen Fragen zur Seite und begleitet Sie durch den gesamten Prozess.',
     benefit6Title: 'Erfahrung & Zuverlässigkeit',
@@ -220,7 +224,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Österreichische Transitkennzeichen können nur für Lkw, Busse und Anhänger/Auflieger europäischer Herkunft beantragt werden.',
     reg2: 'Die Rechnung muss an ein Unternehmen adressiert sein — eine Zulassung auf Privatpersonen ist nicht möglich. Gegebenenfalls kann eine EORI-Nummer angefordert werden.',
     reg3: 'Das Startdatum der Kennzeichen und Versicherung (21 Tage) ist standardmäßig das Bestelldatum, sofern Sie nichts anderes angeben.',
-    reg4: 'Die Kennzeichen dürfen ausschließlich für Fahrten von oder nach Österreich auf einer logischen und kurzestmöglichen Route verwendet werden.',
+    reg4: 'Die Kennzeichen dürfen für Fahrten von oder nach Österreich verwendet werden, wobei die Route durch EU-Länder und andere europäische Staaten führen kann.',
     reg5: 'Diese vorübergehenden Kennzeichen werden nicht im EUCARIS-System registriert, weshalb in einigen Ländern zusätzliche Kontrollen durchgeführt werden können. Wir empfehlen, stets die originalen Fahrzeugpapiere griffbereit zu haben.',
     reg6: 'Unsachgemäße oder unbefugte Nutzung kann zu Maßnahmen durch örtliche Behörden führen. Wir bieten in solchen Fällen keine rechtliche Unterstützung.',
 
@@ -258,6 +262,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'Wie schnell erhalte ich die Kennzeichen?',
     faq7A: 'Bestellungen vor 12:00 Uhr werden am selben Werktag bearbeitet. Kennzeichen und Versicherungspolice werden noch am selben Tag an Ihre Adresse versendet.',
 
+    faq8Q: 'Können mit österreichischen Transitkennzeichen alle EU-Länder durchfahren werden?',
+    faq8A: 'Ja, mit österreichischen Transitkennzeichen können Sie durch EU-Länder fahren, sofern: die Kennzeichen gültig sind (Ablaufdatum nicht überschritten), das Fahrzeug über eine gültige Transitversicherung verfügt, die die durchfahrenen Länder abdeckt, und Sie die gesamte Begleitdokumentation (Zulassungspapiere, Kaufvertrag oder Rechnung, Versicherungsnachweis, ggf. Ausfuhrpapiere) mitführen. Österreichische Transitkennzeichen werden in der EU in der Regel anerkannt, da sie mit einer internationalen Versicherung (Grüne Karte oder EU-Police) einhergehen. Bitte beachten Sie: Sie sind nicht für dauerhaftes Fahren oder alltägliche Nutzung bestimmt. Wenn das Ablaufdatum auf den Kennzeichen überschritten wird, gilt das Fahrzeug als nicht zugelassen.',
+
+    faq9Q: 'Durch welche Nicht-EU-Länder kann mit österreichischen Transitkennzeichen gefahren werden?',
+    faq9A: 'Neben den EU-Ländern können Sie in der Regel auch durch viele europäische Länder fahren, die eine internationale Kfz-Versicherung anerkennen: Serbien, Bosnien und Herzegowina, Montenegro, Nordmazedonien, Albanien, Schweiz, Norwegen, Island, Vereinigtes Königreich (Versicherungsschutz prüfen) und die Türkei (möglich, aber Versicherung muss speziell gelten). Prüfen Sie stets, ob Ihre Versicherungspolice ausdrücklich alle Länder auf Ihrer geplanten Route abdeckt.',
+
     // CTA
     ctaTitle: 'Bereit für österreichische Transitkennzeichen?',
     ctaSubtitle: 'Kontaktieren Sie uns noch heute und sichern Sie sich legale Transitkennzeichen für Ihr Fahrzeug in kürzester Zeit.',
@@ -290,7 +300,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Kontakt',
 
     heroTitle: 'Austrijske tranzitne tablice',
-    heroSubtitle: 'Brzo, pouzdano i profesionalno — obezbedite tranzitne tablice sa WA osiguranjem za vaše vozilo. Vozite legalno od tačke A do tačke B kroz Austriju.',
+    heroSubtitle: 'Brzo, pouzdano i profesionalno — obezbedite tranzitne tablice sa WA osiguranjem za vaše vozilo. Vozite legalno od tačke A do tačke B kroz EU i mnoge druge zemlje.',
     heroCta: 'Zatražite ponudu',
     heroSecondaryCta: 'Saznajte više',
 
@@ -299,7 +309,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'Za vozila koja nemaju važeće registarske tablice ili važeći tehnički pregled, možete koristiti austrijsku izvoznu registraciju, poznatu i kao austrijske tranzitne tablice.',
     aboutDescription2: 'Ove privremene tablice se isporučuju sa privremenim WA osiguranjem i namenjene su za vozila koja se izvoze i prevoze drumskim putem do zemlje odredišta.',
     aboutDescription3: 'Napomena: zahtevi su mogući isključivo za pravna lica (kompanije).',
-    aboutDescription4: 'Ove tablice su namenjene isključivo za vožnju od tačke A do tačke B, odnosno ka ili iz Austrije. Registracija u drugoj zemlji sa ovim tablicama nije moguća — za to su potrebni originalni dokumenti vozila.',
+    aboutDescription4: 'Ove tablice su namenjene za vožnju od tačke A do tačke B, pri čemu ruta može voditi kroz zemlje EU i druge evropske države. Registracija u drugoj zemlji sa ovim tablicama nije moguća — za to su potrebni originalni dokumenti vozila.',
     aboutDescription5: 'Važeći tehnički pregled nije obavezan za izdavanje ovih tablica. Odgovornost za bezbednost i tehničko stanje vozila tokom vožnje uvek leži na kupcu/vozaču.',
 
     benefitsLabel: 'Prednosti',
@@ -311,7 +321,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Bez tehničkog pregleda',
     benefit3Desc: 'Za izdavanje tranzitnih tablica nije potreban važeći tehnički pregled, što olakšava postupak za starija vozila.',
     benefit4Title: 'Legalna vožnja',
-    benefit4Desc: 'Vozite potpuno legalno kroz Austriju i Evropu sa važećim tranzitnim tablicama i dokumentima.',
+    benefit4Desc: 'Vozite potpuno legalno kroz EU i Evropu sa važećim tranzitnim tablicama i dokumentima.',
     benefit5Title: 'Posvećena podrška',
     benefit5Desc: 'Naš stručni tim je spreman da vam pomogne sa svim pitanjima i da vas vodi kroz ceo postupak.',
     benefit6Title: 'Iskustvo i pouzdanost',
@@ -345,7 +355,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Austrijske tranzitne tablice se mogu tražiti samo za kamione, autobuse i prikolice i poluprikolice evropskog porekla.',
     reg2: 'Faktura mora biti adresirana na kompaniju — registracija na ime fizičkog lica nije moguća. Može se tražiti i EORI broj.',
     reg3: 'Datum početka važenja tablica i osiguranja (21 dan) je podrazumevano datum porudžbine, osim ako ne navedete drugačije.',
-    reg4: 'Tablice se smeju koristiti isključivo za vožnju ka ili iz Austrije, logičnom i najkraćom mogućom rutom.',
+    reg4: 'Tablice se smeju koristiti za vožnju ka ili iz Austrije, pri čemu ruta može voditi kroz zemlje EU i druge evropske države.',
     reg5: 'Ove privremene tablice se ne registruju u EUCARIS sistemu, pa u nekim zemljama mogu biti sprovedene dodatne kontrole. Preporučujemo da uvek imate pri ruci originalnu saobraćajnu dozvolu vozila.',
     reg6: 'Nepravilno ili neovlašćeno korišćenje može dovesti do mera lokalnih vlasti. Ne pružamo pravnu podršku u takvim situacijama.',
 
@@ -381,6 +391,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'Koliko brzo mogu dobiti tablice?',
     faq7A: 'Porudžbine primljene pre 12:00 obrađuju se istog radnog dana. Tablice i polisa osiguranja se šalju istog dana na vašu adresu.',
 
+    faq8Q: 'Da li se sa austrijskim tranzitnim tablicama može voziti kroz celu EU?',
+    faq8A: 'Da, sa austrijskim tranzitnim tablicama možete voziti kroz zemlje EU, pod uslovom da: tablice budu važeće (datum isteka nije prošao), vozilo ima važeće tranzitno osiguranje koje pokriva zemlje kroz koje prolazite, i da imate svu prateću dokumentaciju (saobraćajnu dozvolu, kupoprodajni ugovor ili račun, potvrdu o osiguranju, izvozne papire ukoliko su potrebni). Austrijske tranzitne tablice su generalno priznate u EU jer dolaze uz međunarodno osiguranje (zelena karta ili EU polisa). Napomena: nisu namenjene za dugotrajnu vožnju ili svakodnevnu upotrebu. Ako istekne datum na tablicama dok ste na putu, vozilo praktično postaje neregistrovano.',
+
+    faq9Q: 'Kroz koje zemlje van EU je moguće proći sa austrijskim tranzitnim tablicama?',
+    faq9A: 'Pored zemalja EU, uglavnom možete prolaziti i kroz mnoge evropske zemlje koje priznaju međunarodno osiguranje vozila: Srbiju, Bosnu i Hercegovinu, Crnu Goru, Severnu Makedoniju, Albaniju, Švajcarsku, Norvešku, Island, Ujedinjeno Kraljevstvo (proverite pokrivenost osiguranja) i Tursku (moguće, ali osiguranje mora posebno da važi). Uvek proverite da li vaša polisa osiguranja izričito pokriva sve zemlje na vašoj planiranoj ruti.',
+
     ctaTitle: 'Spremni za austrijske tranzitne tablice?',
     ctaSubtitle: 'Kontaktirajte nas danas i obezbedite legalne tranzitne tablice za vaše vozilo u najkraćem roku.',
 
@@ -410,7 +426,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Contact',
 
     heroTitle: 'Austrian Transit Plates',
-    heroSubtitle: 'Fast, reliable, and professional — get transit plates with WA insurance for your vehicle. Drive legally from point A to point B through Austria.',
+    heroSubtitle: 'Fast, reliable, and professional — get transit plates with WA insurance for your vehicle. Drive legally from point A to point B through the EU and many other countries.',
     heroCta: 'Request a Quote',
     heroSecondaryCta: 'Learn More',
 
@@ -419,7 +435,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'For vehicles that do not have valid registration plates or a valid roadworthiness certificate, you can use the Austrian export registration, also known as Austrian transit plates.',
     aboutDescription2: 'These temporary plates come with temporary WA insurance and are intended for vehicles that are being exported and driven by road to the country of destination.',
     aboutDescription3: 'Note: Applications are only accepted from businesses (companies).',
-    aboutDescription4: 'These plates are exclusively intended for driving from point A to point B, to or from Austria. Registration in another country is not possible with these plates — original vehicle documents are required for that.',
+    aboutDescription4: 'These plates are intended for driving from point A to point B, with the route passing through EU countries and other European states. Registration in another country is not possible with these plates — original vehicle documents are required for that.',
     aboutDescription5: 'A valid roadworthiness certificate is not required for the issuance of these plates. The responsibility for the safety and technical condition of the vehicle during the journey always lies with the buyer/driver.',
 
     benefitsLabel: 'Benefits',
@@ -431,7 +447,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'No Roadworthiness Test Required',
     benefit3Desc: 'A valid roadworthiness certificate is not required for issuing transit plates, simplifying the process for older vehicles.',
     benefit4Title: 'Legal Driving',
-    benefit4Desc: 'Drive completely legally through Austria and Europe with valid transit plates and documents.',
+    benefit4Desc: 'Drive completely legally through the EU and Europe with valid transit plates and documents.',
     benefit5Title: 'Dedicated Support',
     benefit5Desc: 'Our expert team is ready to help you with all your questions and guide you through the entire process.',
     benefit6Title: 'Experience & Reliability',
@@ -465,7 +481,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Austrian transit plates can only be requested for trucks, buses, and trailers/semi-trailers of European origin.',
     reg2: 'The invoice must be addressed to a company — registration in the name of a private individual is not possible. An EORI number may also be requested.',
     reg3: 'The start date of the plates and insurance (21 days) defaults to the order date unless you specify otherwise.',
-    reg4: 'The plates may only be used for driving to or from Austria via a logical and reasonably shortest route.',
+    reg4: 'The plates may be used for driving to or from Austria, with the route passing through EU countries and other European states.',
     reg5: 'These temporary plates are not registered in the EUCARIS system, so additional checks may be carried out in some countries. We recommend always keeping the original vehicle registration at hand.',
     reg6: 'Improper or unauthorised use may result in action by local authorities. We do not provide legal support in such cases.',
 
@@ -501,6 +517,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'How quickly can I receive the plates?',
     faq7A: 'Orders received before 12:00 are processed the same business day. Plates and insurance policy are shipped to your address the same day.',
 
+    faq8Q: 'Can you drive through the entire EU with Austrian transit plates?',
+    faq8A: 'Yes, you can drive through EU countries with Austrian transit plates, provided: the plates are valid (expiry date has not passed), the vehicle has valid transit insurance covering the countries you pass through, and you carry all accompanying documentation (registration documents, purchase invoice, insurance confirmation, and export papers if needed). Austrian transit plates are generally recognized in the EU as they come with international insurance (green card or EU policy). Please note: they are not intended for long-term or daily use. If the expiry date on the plates passes while you are on the road, the vehicle effectively becomes unregistered.',
+
+    faq9Q: 'Through which non-EU countries can you drive with Austrian transit plates?',
+    faq9A: 'Besides EU countries, you can generally also drive through many European countries that recognize international vehicle insurance: Serbia, Bosnia and Herzegovina, Montenegro, North Macedonia, Albania, Switzerland, Norway, Iceland, United Kingdom (check insurance coverage) and Turkey (possible, but insurance must specifically cover it). Always verify that your insurance policy explicitly covers all countries on your planned route.',
+
     ctaTitle: 'Ready for Austrian Transit Plates?',
     ctaSubtitle: 'Contact us today and secure legal transit plates for your vehicle in the shortest possible time.',
 
@@ -530,7 +552,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Contact',
 
     heroTitle: 'Numere de tranzit austriece',
-    heroSubtitle: 'Rapid, fiabil și profesionist — obțineți numere de tranzit cu asigurare WA pentru vehiculul dumneavoastră. Conduceți legal din punctul A în punctul B prin Austria.',
+    heroSubtitle: 'Rapid, fiabil și profesionist — obțineți numere de tranzit cu asigurare WA pentru vehiculul dumneavoastră. Conduceți legal din punctul A în punctul B prin UE și multe alte țări.',
     heroCta: 'Solicitați o ofertă',
     heroSecondaryCta: 'Aflați mai multe',
 
@@ -539,7 +561,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'Pentru vehiculele care nu dispun de numere de înmatriculare valabile sau de o inspecție tehnică valabilă, puteți utiliza înmatricularea de export austriacă, cunoscută și sub denumirea de numere de tranzit austriece.',
     aboutDescription2: 'Aceste numere temporare sunt livrate cu o asigurare WA temporară și sunt destinate vehiculelor care sunt exportate și conduse pe drum până în țara de destinație.',
     aboutDescription3: 'Notă: Cererile sunt acceptate exclusiv din partea companiilor (persoane juridice).',
-    aboutDescription4: 'Aceste numere sunt destinate exclusiv conducerii din punctul A în punctul B, spre sau dinspre Austria. Înmatricularea într-o altă țară nu este posibilă cu aceste numere — pentru aceasta sunt necesare documentele originale ale vehiculului.',
+    aboutDescription4: 'Aceste numere sunt destinate conducerii din punctul A în punctul B, traseul putând trece prin țări UE și alte state europene. Înmatricularea într-o altă țară nu este posibilă cu aceste numere — pentru aceasta sunt necesare documentele originale ale vehiculului.',
     aboutDescription5: 'O inspecție tehnică valabilă nu este obligatorie pentru eliberarea acestor numere. Responsabilitatea pentru siguranța și starea tehnică a vehiculului în timpul călătoriei revine întotdeauna cumpărătorului/conducătorului.',
 
     benefitsLabel: 'Avantaje',
@@ -551,7 +573,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Fără inspecție tehnică',
     benefit3Desc: 'O inspecție tehnică valabilă nu este necesară pentru eliberarea numerelor de tranzit, simplificând procedura pentru vehiculele mai vechi.',
     benefit4Title: 'Conducere legală',
-    benefit4Desc: 'Conduceți în deplină legalitate prin Austria și Europa cu numere de tranzit și documente valabile.',
+    benefit4Desc: 'Conduceți în deplină legalitate prin UE și Europa cu numere de tranzit și documente valabile.',
     benefit5Title: 'Asistență dedicată',
     benefit5Desc: 'Echipa noastră de experți este pregătită să vă ajute cu toate întrebările și să vă ghideze pe parcursul întregii proceduri.',
     benefit6Title: 'Experiență și fiabilitate',
@@ -585,7 +607,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Numerele de tranzit austriece pot fi solicitate doar pentru camioane, autobuze și remorci/semiremorci de origine europeană.',
     reg2: 'Factura trebuie să fie adresată unei companii — înmatricularea pe numele unei persoane fizice nu este posibilă. Poate fi solicitat și un număr EORI.',
     reg3: 'Data de început a numerelor și asigurării (21 de zile) este implicit data comenzii, cu excepția cazului în care specificați altfel.',
-    reg4: 'Numerele pot fi utilizate exclusiv pentru condus spre sau dinspre Austria, pe un traseu logic și pe cât posibil cel mai scurt.',
+    reg4: 'Numerele pot fi utilizate pentru condus spre sau dinspre Austria, traseul putând trece prin țări UE și alte state europene.',
     reg5: 'Aceste numere temporare nu sunt înregistrate în sistemul EUCARIS, deci pot fi efectuate controale suplimentare în unele țări. Recomandăm să aveți întotdeauna la îndemână certificatul de înmatriculare original al vehiculului.',
     reg6: 'Utilizarea necorespunzătoare sau neautorizată poate atrage măsuri din partea autorităților locale. Nu oferim asistență juridică în astfel de situații.',
 
@@ -621,6 +643,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'Cât de repede pot primi numerele?',
     faq7A: 'Comenzile primite înainte de 12:00 sunt procesate în aceeași zi lucrătoare. Numerele și polița de asigurare sunt expediate la adresa dumneavoastră în aceeași zi.',
 
+    faq8Q: 'Se poate conduce prin toată UE cu numere de tranzit austriece?',
+    faq8A: 'Da, puteți conduce prin țările UE cu numere de tranzit austriece, cu condiția ca: numerele să fie valabile (data de expirare să nu fi trecut), vehiculul să aibă asigurare de tranzit valabilă care să acopere țările prin care treceți, și să aveți toată documentația însoțitoare (certificat de înmatriculare, factură de vânzare, confirmare de asigurare, documente de export dacă este cazul). Numerele de tranzit austriece sunt în general recunoscute în UE deoarece vin cu asigurare internațională (carte verde sau poliță UE). Notă: nu sunt destinate pentru utilizare pe termen lung sau zilnică. Dacă data de expirare de pe numere trece în timp ce sunteți în tranzit, vehiculul devine practic neînmatriculat.',
+
+    faq9Q: 'Prin ce țări din afara UE se poate conduce cu numere de tranzit austriece?',
+    faq9A: 'Pe lângă țările UE, puteți în general conduce și prin multe țări europene care recunosc asigurarea internațională a vehiculelor: Serbia, Bosnia și Herțegovina, Muntenegru, Macedonia de Nord, Albania, Elveția, Norvegia, Islanda, Regatul Unit (verificați acoperirea asigurării) și Turcia (posibil, dar asigurarea trebuie să acopere în mod specific). Verificați întotdeauna că polița dumneavoastră de asigurare acoperă explicit toate țările de pe traseul planificat.',
+
     ctaTitle: 'Sunteți pregătit pentru numere de tranzit austriece?',
     ctaSubtitle: 'Contactați-ne astăzi și asigurați-vă numere de tranzit legale pentru vehiculul dumneavoastră în cel mai scurt timp.',
 
@@ -650,7 +678,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Контакт',
 
     heroTitle: 'Австрийски транзитни табели',
-    heroSubtitle: 'Бързо, надеждно и професионално — осигурете си транзитни табели с WA застраховка за вашия автомобил. Шофирайте законно от точка А до точка Б през Австрия.',
+    heroSubtitle: 'Бързо, надеждно и професионално — осигурете си транзитни табели с WA застраховка за вашия автомобил. Шофирайте законно от точка А до точка Б през ЕС и много други държави.',
     heroCta: 'Заявете оферта',
     heroSecondaryCta: 'Научете повече',
 
@@ -659,7 +687,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'За превозни средства, които нямат валидни регистрационни табели или валиден технически преглед, можете да използвате австрийската износна регистрация, известна още като австрийски транзитни табели.',
     aboutDescription2: 'Тези временни табели се доставят с временна WA застраховка и са предназначени за превозни средства, които се изнасят и се шофират по пътя до страната на дестинация.',
     aboutDescription3: 'Забележка: Заявления са възможни само за юридически лица (компании).',
-    aboutDescription4: 'Тези табели са предназначени изключително за шофиране от точка А до точка Б, до или от Австрия. Регистрация в друга страна с тези табели не е възможна — за това са необходими оригиналните документи на превозното средство.',
+    aboutDescription4: 'Тези табели са предназначени за шофиране от точка А до точка Б, като маршрутът може да минава през държави от ЕС и други европейски държави. Регистрация в друга страна с тези табели не е възможна — за това са необходими оригиналните документи на превозното средство.',
     aboutDescription5: 'Валиден технически преглед не е задължителен за издаване на тези табели. Отговорността за безопасността и техническото състояние на превозното средство по време на пътуването винаги носи купувачът/шофьорът.',
 
     benefitsLabel: 'Предимства',
@@ -671,7 +699,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Без технически преглед',
     benefit3Desc: 'Валиден технически преглед не е необходим за издаване на транзитните табели, което опростява процедурата за по-стари превозни средства.',
     benefit4Title: 'Законно шофиране',
-    benefit4Desc: 'Шофирайте напълно законно през Австрия и Европа с валидни транзитни табели и документи.',
+    benefit4Desc: 'Шофирайте напълно законно през ЕС и Европа с валидни транзитни табели и документи.',
     benefit5Title: 'Специализирана поддръжка',
     benefit5Desc: 'Нашият експертен екип е готов да ви помогне с всички въпроси и да ви преведе през цялата процедура.',
     benefit6Title: 'Опит и надеждност',
@@ -705,7 +733,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Австрийски транзитни табели могат да се заявяват само за камиони, автобуси и ремаркета/полуремаркета от европейски произход.',
     reg2: 'Фактурата трябва да бъде адресирана до компания — регистрация на името на физическо лице не е възможна. Може да се изиска и EORI номер.',
     reg3: 'Началната дата на табелите и застраховката (21 дни) е по подразбиране датата на поръчката, освен ако не посочите друго.',
-    reg4: 'Табелите могат да се използват само за шофиране до или от Австрия по логичен и възможно най-кратък маршрут.',
+    reg4: 'Табелите могат да се използват за шофиране до или от Австрия, като маршрутът може да минава през държави от ЕС и други европейски държави.',
     reg5: 'Тези временни табели не се регистрират в системата EUCARIS, така че в някои страни могат да се извършват допълнителни проверки. Препоръчваме винаги да имате под ръка оригиналното свидетелство за регистрация на превозното средство.',
     reg6: 'Неправилна или неоторизирана употреба може да доведе до мерки от местните власти. Не осигуряваме правна подкрепа в такива ситуации.',
 
@@ -741,6 +769,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'Колко бързо мога да получа табелите?',
     faq7A: 'Поръчки, получени преди 12:00, се обработват същия работен ден. Табелите и застрахователната полица се изпращат на вашия адрес същия ден.',
 
+    faq8Q: 'Може ли да се шофира през цялата ЕС с австрийски транзитни табели?',
+    faq8A: 'Да, можете да шофирате през държави от ЕС с австрийски транзитни табели, при условие че: табелите са валидни (датата на изтичане не е преминала), превозното средство има валидна транзитна застраховка, покриваща държавите, през които преминавате, и носите цялата съпътстваща документация (свидетелство за регистрация, фактура за покупка, потвърждение за застраховка, износни документи при необходимост). Австрийските транзитни табели са общо взето признати в ЕС, тъй като идват с международна застраховка (зелена карта или ЕС полица). Забележка: не са предназначени за дълготрайно шофиране или ежедневна употреба. Ако датата на изтичане на табелите изтече докато сте на път, превозното средство на практика става нерегистрирано.',
+
+    faq9Q: 'През кои държави извън ЕС може да се шофира с австрийски транзитни табели?',
+    faq9A: 'Освен държавите от ЕС, като цяло можете да шофирате и през много европейски държави, които признават международната застраховка на моторни превозни средства: Сърбия, Босна и Херцеговина, Черна гора, Северна Македония, Албания, Швейцария, Норвегия, Исландия, Обединеното кралство (проверете покритието на застраховката) и Турция (възможно, но застраховката трябва специално да покрива). Винаги проверявайте дали вашата застрахователна полица изрично покрива всички държави по планирания маршрут.',
+
     ctaTitle: 'Готови ли сте за австрийски транзитни табели?',
     ctaSubtitle: 'Свържете се с нас днес и осигурете законни транзитни табели за вашия автомобил в най-кратък срок.',
 
@@ -770,7 +804,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Contact',
 
     heroTitle: 'Plaques de transit autrichiennes',
-    heroSubtitle: 'Rapide, fiable et professionnel — obtenez des plaques de transit avec assurance WA pour votre véhicule. Conduisez légalement du point A au point B à travers l\'Autriche.',
+    heroSubtitle: 'Rapide, fiable et professionnel — obtenez des plaques de transit avec assurance WA pour votre véhicule. Conduisez légalement du point A au point B à travers l\'UE et de nombreux autres pays.',
     heroCta: 'Demander un devis',
     heroSecondaryCta: 'En savoir plus',
 
@@ -779,7 +813,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'Pour les véhicules qui ne disposent pas de plaques d\'immatriculation valides ou d\'un contrôle technique valide, vous pouvez utiliser l\'immatriculation d\'exportation autrichienne, également connue sous le nom de plaques de transit autrichiennes.',
     aboutDescription2: 'Ces plaques temporaires sont fournies avec une assurance WA temporaire et sont destinées aux véhicules qui sont exportés et conduits par la route vers le pays de destination.',
     aboutDescription3: 'Remarque : Les demandes sont acceptées uniquement pour les entreprises (sociétés).',
-    aboutDescription4: 'Ces plaques sont exclusivement destinées à la conduite du point A au point B, vers ou depuis l\'Autriche. L\'immatriculation dans un autre pays n\'est pas possible avec ces plaques — les documents originaux du véhicule sont nécessaires pour cela.',
+    aboutDescription4: 'Ces plaques sont destinées à la conduite du point A au point B, l\'itinéraire pouvant passer par des pays de l\'UE et d\'autres États européens. L\'immatriculation dans un autre pays n\'est pas possible avec ces plaques — les documents originaux du véhicule sont nécessaires pour cela.',
     aboutDescription5: 'Un contrôle technique valide n\'est pas obligatoire pour la délivrance de ces plaques. La responsabilité de la sécurité et de l\'état technique du véhicule pendant le trajet incombe toujours à l\'acheteur/conducteur.',
 
     benefitsLabel: 'Avantages',
@@ -791,7 +825,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Sans contrôle technique',
     benefit3Desc: 'Un contrôle technique valide n\'est pas requis pour la délivrance des plaques de transit, ce qui simplifie la démarche pour les véhicules plus anciens.',
     benefit4Title: 'Conduite légale',
-    benefit4Desc: 'Conduisez en toute légalité à travers l\'Autriche et l\'Europe avec des plaques de transit et des documents valides.',
+    benefit4Desc: 'Conduisez en toute légalité à travers l\'UE et l\'Europe avec des plaques de transit et des documents valides.',
     benefit5Title: 'Support dédié',
     benefit5Desc: 'Notre équipe d\'experts est prête à vous aider pour toutes vos questions et à vous guider tout au long de la procédure.',
     benefit6Title: 'Expérience et fiabilité',
@@ -825,7 +859,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Les plaques de transit autrichiennes ne peuvent être demandées que pour les camions, bus et remorques/semi-remorques d\'origine européenne.',
     reg2: 'La facture doit être adressée à une entreprise — l\'immatriculation au nom d\'un particulier n\'est pas possible. Un numéro EORI peut également être demandé.',
     reg3: 'La date de début des plaques et de l\'assurance (21 jours) est par défaut la date de commande, sauf indication contraire de votre part.',
-    reg4: 'Les plaques ne peuvent être utilisées que pour la conduite vers ou depuis l\'Autriche via un itinéraire logique et le plus court possible.',
+    reg4: 'Les plaques peuvent être utilisées pour la conduite vers ou depuis l\'Autriche, l\'itinéraire pouvant passer par des pays de l\'UE et d\'autres États européens.',
     reg5: 'Ces plaques temporaires ne sont pas enregistrées dans le système EUCARIS, des contrôles supplémentaires peuvent donc être effectués dans certains pays. Nous recommandons de toujours garder le certificat d\'immatriculation original du véhicule à portée de main.',
     reg6: 'Une utilisation incorrecte ou non autorisée peut entraîner des sanctions de la part des autorités locales. Nous ne fournissons pas de soutien juridique dans de telles situations.',
 
@@ -861,6 +895,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq7Q: 'Combien de temps faut-il pour recevoir les plaques ?',
     faq7A: 'Les commandes reçues avant 12 h 00 sont traitées le même jour ouvrable. Les plaques et la police d\'assurance sont expédiées à votre adresse le jour même.',
 
+    faq8Q: 'Peut-on conduire dans toute l\'UE avec des plaques de transit autrichiennes ?',
+    faq8A: 'Oui, vous pouvez conduire dans les pays de l\'UE avec des plaques de transit autrichiennes, à condition que : les plaques soient valides (la date d\'expiration n\'est pas dépassée), le véhicule dispose d\'une assurance transit valide couvrant les pays traversés, et que vous ayez toute la documentation nécessaire (certificat d\'immatriculation, facture d\'achat, confirmation d\'assurance, documents d\'exportation si nécessaire). Les plaques de transit autrichiennes sont généralement reconnues dans l\'UE car elles sont accompagnées d\'une assurance internationale (carte verte ou police UE). Remarque : elles ne sont pas destinées à une utilisation prolongée ou quotidienne. Si la date d\'expiration des plaques est dépassée pendant le trajet, le véhicule est considéré comme non immatriculé.',
+
+    faq9Q: 'Dans quels pays hors UE peut-on conduire avec des plaques de transit autrichiennes ?',
+    faq9A: 'Outre les pays de l\'UE, vous pouvez généralement conduire dans de nombreux pays européens qui reconnaissent l\'assurance internationale des véhicules : Serbie, Bosnie-Herzégovine, Monténégro, Macédoine du Nord, Albanie, Suisse, Norvège, Islande, Royaume-Uni (vérifiez la couverture d\'assurance) et Turquie (possible, mais l\'assurance doit couvrir spécifiquement). Vérifiez toujours que votre police d\'assurance couvre explicitement tous les pays sur votre itinéraire prévu.',
+
     ctaTitle: 'Prêt pour les plaques de transit autrichiennes ?',
     ctaSubtitle: 'Contactez-nous aujourd\'hui et obtenez des plaques de transit légales pour votre véhicule dans les plus brefs délais.',
 
@@ -890,7 +930,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navContact: 'Contatti',
 
     heroTitle: 'Targhe di transito austriache',
-    heroSubtitle: 'Veloce, affidabile e professionale — ottieni targhe di transito con assicurazione WA per il tuo veicolo. Guida legalmente dal punto A al punto B attraverso l\'Austria.',
+    heroSubtitle: 'Veloce, affidabile e professionale — ottieni targhe di transito con assicurazione WA per il tuo veicolo. Guida legalmente dal punto A al punto B attraverso l\'UE e molti altri paesi.',
     heroCta: 'Richiedi preventivo',
     heroSecondaryCta: 'Scopri di più',
 
@@ -899,7 +939,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription1: 'Per i veicoli che non dispongono di targhe di immatricolazione valide o di un\'ispezione tecnica valida, è possibile utilizzare l\'immatricolazione di esportazione austriaca, nota anche come targhe di transito austriache.',
     aboutDescription2: 'Queste targhe temporanee sono fornite con un\'assicurazione WA temporanea e sono destinate ai veicoli che vengono esportati e guidati su strada verso il paese di destinazione.',
     aboutDescription3: 'Nota: Le richieste sono accettate esclusivamente da aziende (società).',
-    aboutDescription4: 'Queste targhe sono destinate esclusivamente alla guida dal punto A al punto B, verso o dall\'Austria. L\'immatricolazione in un altro paese non è possibile con queste targhe — per questo sono necessari i documenti originali del veicolo.',
+    aboutDescription4: 'Queste targhe sono destinate alla guida dal punto A al punto B, con il percorso che può attraversare paesi dell\'UE e altri Stati europei. L\'immatricolazione in un altro paese non è possibile con queste targhe — per questo sono necessari i documenti originali del veicolo.',
     aboutDescription5: 'Un\'ispezione tecnica valida non è obbligatoria per il rilascio di queste targhe. La responsabilità della sicurezza e dello stato tecnico del veicolo durante il viaggio spetta sempre all\'acquirente/conducente.',
 
     benefitsLabel: 'Vantaggi',
@@ -911,7 +951,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit3Title: 'Senza ispezione tecnica',
     benefit3Desc: 'Un\'ispezione tecnica valida non è richiesta per il rilascio delle targhe di transito, semplificando la procedura per i veicoli più datati.',
     benefit4Title: 'Guida legale',
-    benefit4Desc: 'Guida in piena legalità attraverso l\'Austria e l\'Europa con targhe di transito e documenti validi.',
+    benefit4Desc: 'Guida in piena legalità attraverso l\'UE e l\'Europa con targhe di transito e documenti validi.',
     benefit5Title: 'Assistenza dedicata',
     benefit5Desc: 'Il nostro team di esperti è pronto ad aiutarti con tutte le domande e a guidarti attraverso l\'intera procedura.',
     benefit6Title: 'Esperienza e affidabilità',
@@ -945,7 +985,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg1: 'Le targhe di transito austriache possono essere richieste solo per camion, autobus e rimorchi/semi-rimorchi di origine europea.',
     reg2: 'La fattura deve essere intestata a un\'azienda — l\'immatricolazione a nome di una persona fisica non è possibile. Può essere richiesto anche un numero EORI.',
     reg3: 'La data di inizio delle targhe e dell\'assicurazione (21 giorni) è predefinita alla data dell\'ordine, salvo diversa indicazione.',
-    reg4: 'Le targhe possono essere utilizzate esclusivamente per la guida verso o dall\'Austria tramite un percorso logico e il più breve possibile.',
+    reg4: 'Le targhe possono essere utilizzate per la guida verso o dall\'Austria, con il percorso che può attraversare paesi dell\'UE e altri Stati europei.',
     reg5: 'Queste targhe temporanee non sono registrate nel sistema EUCARIS, pertanto in alcuni paesi possono essere effettuati controlli aggiuntivi. Consigliamo di avere sempre a portata di mano il certificato di immatricolazione originale del veicolo.',
     reg6: 'L\'uso improprio o non autorizzato può comportare provvedimenti da parte delle autorità locali. Non forniamo assistenza legale in tali situazioni.',
 
@@ -980,6 +1020,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'No, le targhe vengono rilasciate sulla base del numero di telaio del veicolo, quindi non è possibile annullare o restituire un ordine dopo che la richiesta è stata inviata.',
     faq7Q: 'Quanto velocemente posso ricevere le targhe?',
     faq7A: 'Gli ordini ricevuti prima delle 12:00 vengono evasi lo stesso giorno lavorativo. Le targhe e la polizza assicurativa vengono spedite al tuo indirizzo il giorno stesso.',
+
+    faq8Q: 'È possibile guidare in tutta l\'UE con le targhe di transito austriache?',
+    faq8A: 'Sì, è possibile guidare nei paesi dell\'UE con le targhe di transito austriache, a condizione che: le targhe siano valide (la data di scadenza non sia passata), il veicolo abbia un\'assicurazione di transito valida che copra i paesi attraversati, e che si abbia tutta la documentazione necessaria (certificato di immatricolazione, fattura di acquisto, conferma dell\'assicurazione, documenti di esportazione se necessari). Le targhe di transito austriache sono generalmente riconosciute nell\'UE poiché accompagnate da un\'assicurazione internazionale (carta verde o polizza UE). Nota: non sono destinate all\'uso prolungato o quotidiano. Se la data di scadenza sulle targhe scade durante il viaggio, il veicolo diventa di fatto non immatricolato.',
+
+    faq9Q: 'In quali paesi extra-UE si può guidare con le targhe di transito austriache?',
+    faq9A: 'Oltre ai paesi dell\'UE, è possibile in genere guidare anche in molti paesi europei che riconoscono l\'assicurazione internazionale dei veicoli: Serbia, Bosnia ed Erzegovina, Montenegro, Macedonia del Nord, Albania, Svizzera, Norvegia, Islanda, Regno Unito (verificare la copertura assicurativa) e Turchia (possibile, ma l\'assicurazione deve coprire specificamente). Verificate sempre che la vostra polizza assicurativa copra esplicitamente tutti i paesi sul percorso previsto.',
 
     ctaTitle: 'Pronto per le targhe di transito austriache?',
     ctaSubtitle: 'Contattaci oggi e assicurati targhe di transito legali per il tuo veicolo nel minor tempo possibile.',
