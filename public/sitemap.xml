@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://transitpro.eu/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://transitpro.eu/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://transitpro.eu/?lang=sr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://transitpro.eu/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://transitpro.eu/?lang=ro" />
+    <xhtml:link rel="alternate" hreflang="bg" href="https://transitpro.eu/?lang=bg" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://transitpro.eu/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://transitpro.eu/?lang=it" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://transitpro.eu/" />
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://transitpro.eu/og-image.png</image:loc>
+      <image:title>Transit Pro — Austrian Transit Plates</image:title>
+      <image:caption>Austrian transit plates with WA insurance for legal driving through the EU</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://transitpro.eu/tablice.png</image:loc>
+      <image:title>Transit Pro Transit Plates</image:title>
+    </image:image>
+  </url>
+
+</urlset>

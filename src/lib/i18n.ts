@@ -145,6 +145,13 @@ export type TranslationKeys = {
   formError: string;
   formRequired: string;
 
+  // SEO
+  seoMetaTitle: string;
+  seoMetaDescription: string;
+  seoOgTitle: string;
+  seoOgDescription: string;
+  seoOgImageAlt: string;
+
   // Footer
   footerText: string;
   footerRights: string;
@@ -284,6 +291,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     formRequired: 'Dieses Feld ist erforderlich',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Österreichische Transitkennzeichen | WA-Versicherung | EU-weit',
+    seoMetaDescription: 'Österreichische Transitkennzeichen mit WA-Versicherung für Lkw, Busse und Anhänger. Legale Durchfahrt durch die EU und viele weitere Länder. Same-Day-Bearbeitung. Nur für Unternehmen.',
+    seoOgTitle: 'Transit Pro — Österreichische Transitkennzeichen mit WA-Versicherung',
+    seoOgDescription: 'Schnelle, zuverlässige und professionelle Abwicklung österreichischer Transitkennzeichen. Legale Durchfahrt durch die EU und viele weitere Länder.',
+    seoOgImageAlt: 'Transit Pro — Österreichische Transitkennzeichen auf weißem Hintergrund',
+
     // Footer
     footerText: 'Transit Pro — Ihr zuverlässiger Partner für österreichische Transitkennzeichen',
     footerRights: 'Alle Rechte vorbehalten.',
@@ -411,6 +425,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'Došlo je do greške. Pokušajte ponovo.',
     formRequired: 'Ovo polje je obavezno',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Austrijske tranzitne tablice | WA osiguranje | EU',
+    seoMetaDescription: 'Austrijske tranzitne tablice sa WA osiguranjem za kamione, autobuse i prikolice. Legalna vožnja kroz EU i mnoge druge zemlje. Isporuka istog dana. Samo za pravna lica.',
+    seoOgTitle: 'Transit Pro — Austrijske tranzitne tablice sa WA osiguranjem',
+    seoOgDescription: 'Brza, pouzdana i profesionalna obrada austrijskih tranzitnih tablica. Legalna vožnja kroz EU i mnoge druge zemlje.',
+    seoOgImageAlt: 'Transit Pro — Austrijske tranzitne tablice na beloj pozadini',
+
+    // Footer
     footerText: 'Transit Pro — Vaš pouzdani partner za austrijske tranzitne tablice',
     footerRights: 'Sva prava zadržana.',
     footerPrivacy: 'Politika privatnosti',
@@ -537,6 +559,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'An error occurred. Please try again.',
     formRequired: 'This field is required',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Austrian Transit Plates | WA Insurance | EU-wide',
+    seoMetaDescription: 'Austrian transit plates with WA insurance for trucks, buses, and trailers. Legal driving through the EU and many more countries. Same-day processing. Businesses only.',
+    seoOgTitle: 'Transit Pro — Austrian Transit Plates with WA Insurance',
+    seoOgDescription: 'Fast, reliable, and professional Austrian transit plates processing. Drive legally through the EU and many more countries.',
+    seoOgImageAlt: 'Transit Pro — Austrian transit plates on white background',
+
+    // Footer
     footerText: 'Transit Pro — Your reliable partner for Austrian transit plates',
     footerRights: 'All rights reserved.',
     footerPrivacy: 'Privacy Policy',
@@ -663,6 +693,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'A apărut o eroare. Vă rugăm să încercați din nou.',
     formRequired: 'Acest câmp este obligatoriu',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Numere de tranzit austriece | Asigurare WA | UE',
+    seoMetaDescription: 'Numere de tranzit austriece cu asigurare WA pentru camioane, autobuze și remorci. Conducere legală prin UE și multe alte țări. Procesare în aceeași zi. Doar pentru companii.',
+    seoOgTitle: 'Transit Pro — Numere de tranzit austriece cu asigurare WA',
+    seoOgDescription: 'Procesare rapidă, fiabilă și profesionistă a numerelor de tranzit austriece. Conducere legală prin UE și multe alte țări.',
+    seoOgImageAlt: 'Transit Pro — Numere de tranzit austriece pe fond alb',
+
+    // Footer
     footerText: 'Transit Pro — Partenerul dumneavoastră de încredere pentru numere de tranzit austriece',
     footerRights: 'Toate drepturile rezervate.',
     footerPrivacy: 'Politica de confidențialitate',
@@ -789,6 +827,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'Възникна грешка. Моля, опитайте отново.',
     formRequired: 'Това поле е задължително',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Австрийски транзитни табели | WA застраховка | ЕС',
+    seoMetaDescription: 'Австрийски транзитни табели с WA застраховка за камиони, автобуси и ремаркета. Законно шофиране през ЕС и много други държави. Обработка същия ден. Само за компании.',
+    seoOgTitle: 'Transit Pro — Австрийски транзитни табели с WA застраховка',
+    seoOgDescription: 'Бърза, надеждна и професионална обработка на австрийски транзитни табели. Законно шофиране през ЕС и много други държави.',
+    seoOgImageAlt: 'Transit Pro — Австрийски транзитни табели на бял фон',
+
+    // Footer
     footerText: 'Transit Pro — Вашият надежден партньор за австрийски транзитни табели',
     footerRights: 'Всички права запазени.',
     footerPrivacy: 'Политика за поверителност',
@@ -915,6 +961,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'Une erreur est survenue. Veuillez réessayer.',
     formRequired: 'Ce champ est obligatoire',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Plaques de transit autrichiennes | Assurance WA | UE',
+    seoMetaDescription: 'Plaques de transit autrichiennes avec assurance WA pour camions, bus et remorques. Conduite légale dans l\'UE et de nombreux autres pays. Traitement le jour même. Entreprises uniquement.',
+    seoOgTitle: 'Transit Pro — Plaques de transit autrichiennes avec assurance WA',
+    seoOgDescription: 'Traitement rapide, fiable et professionnel des plaques de transit autrichiennes. Conduite légale dans l\'UE et de nombreux autres pays.',
+    seoOgImageAlt: 'Transit Pro — Plaques de transit autrichiennes sur fond blanc',
+
+    // Footer
     footerText: 'Transit Pro — Votre partenaire de confiance pour les plaques de transit autrichiennes',
     footerRights: 'Tous droits réservés.',
     footerPrivacy: 'Politique de confidentialité',
@@ -1041,6 +1095,14 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formError: 'Si è verificato un errore. Riprova.',
     formRequired: 'Questo campo è obbligatorio',
 
+    // SEO
+    seoMetaTitle: 'Transit Pro — Targhe di transito austriache | Assicurazione WA | UE',
+    seoMetaDescription: 'Targhe di transito austriache con assicurazione WA per camion, autobus e rimorchi. Guida legale nell\'UE e in molti altri paesi. Spedizione il giorno stesso. Solo per aziende.',
+    seoOgTitle: 'Transit Pro — Targhe di transito austriache con assicurazione WA',
+    seoOgDescription: 'Trattazione rapida, affidabile e professionale delle targhe di transito austriache. Guida legale nell\'UE e in molti altri paesi.',
+    seoOgImageAlt: 'Transit Pro — Targhe di transito austriache su sfondo bianco',
+
+    // Footer
     footerText: 'Transit Pro — Il tuo partner affidabile per le targhe di transito austriache',
     footerRights: 'Tutti i diritti riservati.',
     footerPrivacy: 'Informativa sulla privacy',
