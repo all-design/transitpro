@@ -12,7 +12,7 @@ import {
   FileText,
   ArrowRight,
   CheckCircle2,
-  ChevronDown,
+
   Phone,
   Mail,
   MapPin,
@@ -175,11 +175,11 @@ export default function Home() {
             {/* Logo from uploaded file */}
             <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo('hero')}>
               <Image
-                src="/logo-tp.png"
+                src="/logoTP.png"
                 alt="Transit Pro Logo"
-                width={140}
-                height={44}
-                className="h-9 w-auto object-contain"
+                width={180}
+                height={56}
+                className="h-7 sm:h-8 md:h-9 w-auto object-contain"
                 priority
               />
             </div>
@@ -311,11 +311,11 @@ export default function Home() {
               {/* Transit plates image instead of badge */}
               <motion.div variants={fadeInUp} className="mb-8">
                 <Image
-                  src="/transit-plates.png"
-                  alt="Transit Pro - Austrian Transit Plates"
-                  width={280}
-                  height={280}
-                  className="w-48 sm:w-56 md:w-64 h-auto drop-shadow-2xl rounded-lg"
+                  src="/tablice.png"
+                  alt="Transit Pro - Österreichische Transitkennzeichen"
+                  width={600}
+                  height={200}
+                  className="w-64 sm:w-80 md:w-96 lg:w-[480px] h-auto drop-shadow-2xl"
                   priority
                 />
               </motion.div>
@@ -347,10 +347,10 @@ export default function Home() {
                   size="lg"
                   variant="outline"
                   onClick={() => scrollTo('about')}
-                  className="border-white/30 text-white hover:bg-white/10 h-12 text-base"
+                  className="group border-white/30 bg-transparent text-red-500 hover:text-white hover:bg-white/10 h-12 text-base font-semibold transition-colors"
                 >
                   {t.heroSecondaryCta}
-                  <ChevronDown className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4 text-red-500 group-hover:text-white transition-colors" />
                 </Button>
               </motion.div>
 
@@ -838,11 +838,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo-tp.png"
+                src="/logoTPs.png"
                 alt="Transit Pro"
-                width={100}
-                height={32}
-                className="h-7 w-auto object-contain brightness-0 invert"
+                width={80}
+                height={28}
+                className="h-6 sm:h-7 w-auto object-contain brightness-0 invert"
               />
               <span className="text-xs text-gray-500">— {t.footerText}</span>
             </div>
