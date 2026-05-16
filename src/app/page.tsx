@@ -21,6 +21,7 @@ import {
   Truck,
   Loader2,
 } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -32,13 +33,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { useLanguageStore } from '@/store/language-store';
@@ -72,6 +66,25 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
     </motion.div>
   );
 }
+
+// Flag emoji to country code mapping for proper flag rendering
+function CountryFlag({ countryCode, className = '' }: { countryCode: string; className?: string }) {
+  const codePoints = countryCode
+    .toUpperCase()
+    .split('')
+    .map((char) => 127397 + char.charCodeAt(0));
+  return <span className={className}>{String.fromCodePoint(...codePoints)}</span>;
+}
+
+const languageCountryCodes: Record<LanguageCode, string> = {
+  de: 'DE',
+  sr: 'RS',
+  en: 'GB',
+  ro: 'RO',
+  bg: 'BG',
+  fr: 'FR',
+  it: 'IT',
+};
 
 export default function Home() {
   const { language, setLanguage } = useLanguageStore();
@@ -139,13 +152,9 @@ export default function Home() {
     { number: '05', title: t.processStep5Title, desc: t.processStep5Desc },
   ];
 
-  const documents = [
-    t.doc1, t.doc2, t.doc3, t.doc4, t.doc5,
-  ];
+  const documents = [t.doc1, t.doc2, t.doc3, t.doc4, t.doc5];
 
-  const regulations = [
-    t.reg1, t.reg2, t.reg3, t.reg4, t.reg5, t.reg6,
-  ];
+  const regulations = [t.reg1, t.reg2, t.reg3, t.reg4, t.reg5, t.reg6];
 
   const faqs = [
     { q: t.faq1Q, a: t.faq1A },
@@ -163,14 +172,16 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('hero')}>
-              <div className="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center">
-                <Truck className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">
-                Transit<span className="text-red-600">Pro</span>
-              </span>
+            {/* Logo from uploaded file */}
+            <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo('hero')}>
+              <Image
+                src="/logo-tp.png"
+                alt="Transit Pro Logo"
+                width={140}
+                height={44}
+                className="h-9 w-auto object-contain"
+                priority
+              />
             </div>
 
             {/* Desktop Nav */}
@@ -192,28 +203,41 @@ export default function Home() {
               ))}
             </nav>
 
-            {/* Language Selector + Mobile Menu Toggle */}
-            <div className="flex items-center gap-3">
-              <Select value={language} onValueChange={(val) => setLanguage(val as LanguageCode)}>
-                <SelectTrigger className="w-[80px] h-9 text-sm border-gray-200 focus:ring-red-500">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {languages.map((lang) => (
-                    <SelectItem key={lang.code} value={lang.code}>
-                      <span className="flex items-center gap-1.5">
-                        <span className="text-base">{lang.flag}</span>
-                        <span className="uppercase font-semibold text-xs">{lang.code}</span>
-                      </span>
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+            {/* Language Flags + Mobile Menu Toggle */}
+            <div className="flex items-center gap-1">
+              {/* Flag buttons for language selection */}
+              <div className="hidden sm:flex items-center gap-0.5">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => setLanguage(lang.code)}
+                    className={`px-1.5 py-1 rounded-md text-lg transition-all ${
+                      language === lang.code
+                        ? 'bg-red-50 ring-2 ring-red-500 scale-110'
+                        : 'hover:bg-gray-100 opacity-60 hover:opacity-100'
+                    }`}
+                    title={lang.name}
+                  >
+                    <CountryFlag countryCode={languageCountryCodes[lang.code]} />
+                  </button>
+                ))}
+              </div>
+
+              {/* Mobile language selector */}
+              <div className="sm:hidden">
+                <button
+                  onClick={() => setLanguage(language)}
+                  className="px-2 py-1 rounded-md text-lg bg-gray-50 hover:bg-gray-100"
+                  title={t.navContact}
+                >
+                  <CountryFlag countryCode={languageCountryCodes[lang.code]} />
+                </button>
+              </div>
 
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden"
+                className="md:hidden ml-1"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -246,6 +270,23 @@ export default function Home() {
                   {item.label}
                 </button>
               ))}
+              <Separator className="my-2" />
+              <div className="flex flex-wrap gap-1 px-2 pb-2">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => { setLanguage(lang.code); setMobileMenuOpen(false); }}
+                    className={`px-2 py-1 rounded-md text-sm font-medium transition-all flex items-center gap-1 ${
+                      language === lang.code
+                        ? 'bg-red-600 text-white'
+                        : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+                    }`}
+                  >
+                    <CountryFlag countryCode={languageCountryCodes[lang.code]} />
+                    <span className="text-xs">{lang.code.toUpperCase()}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
@@ -269,10 +310,16 @@ export default function Home() {
               variants={staggerContainer}
               className="max-w-3xl"
             >
-              <motion.div variants={fadeInUp}>
-                <Badge className="bg-red-600 hover:bg-red-700 text-white mb-6 px-4 py-1.5 text-sm font-medium">
-                  🇦🇹 Austrian Transit Plates
-                </Badge>
+              {/* Transit plates image instead of badge */}
+              <motion.div variants={fadeInUp} className="mb-8">
+                <Image
+                  src="/transit-plates.png"
+                  alt="Transit Pro - Austrian Transit Plates"
+                  width={280}
+                  height={280}
+                  className="w-48 sm:w-56 md:w-64 h-auto drop-shadow-2xl rounded-lg"
+                  priority
+                />
               </motion.div>
 
               <motion.h1
@@ -312,8 +359,8 @@ export default function Home() {
               {/* Quick stats */}
               <motion.div variants={fadeInUp} className="mt-12 flex flex-wrap gap-8">
                 {[
-                  { value: '21', unit: t.pricingDuration.split(':')[0] || 'Days', label: t.pricingDuration },
-                  { value: '12:00', unit: '', label: t.pricingOrderBefore },
+                  { value: '21', label: t.pricingDuration },
+                  { value: '12:00', label: t.pricingOrderBefore },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-red-400">{stat.value}</div>
@@ -499,8 +546,8 @@ export default function Home() {
                     </CardHeader>
                     <Separator className="mb-4" />
                     <CardContent className="pt-0">
-                      <div className="text-4xl font-bold text-gray-900 mb-1">
-                        €490<span className="text-lg font-normal text-gray-400">,00</span>
+                      <div className="text-3xl font-bold text-gray-900 mb-1">
+                        {t.pricingOnRequest}
                       </div>
                       <p className="text-sm text-gray-500 mb-6">{t.pricingDuration}</p>
 
@@ -539,8 +586,8 @@ export default function Home() {
                     </CardHeader>
                     <Separator className="mb-4" />
                     <CardContent className="pt-0">
-                      <div className="text-4xl font-bold text-gray-900 mb-1">
-                        €425<span className="text-lg font-normal text-gray-400">,00</span>
+                      <div className="text-3xl font-bold text-gray-900 mb-1">
+                        {t.pricingOnRequest}
                       </div>
                       <p className="text-sm text-gray-500 mb-6">{t.pricingDuration}</p>
 
@@ -636,7 +683,7 @@ export default function Home() {
                       <div>
                         <h3 className="font-semibold text-white">Telefon</h3>
                         <p className="text-gray-300 text-sm mt-1">+43 1 234 5678</p>
-                        <p className="text-gray-400 text-xs mt-1">Mon-Fri: 08:00 - 17:00 CET</p>
+                        <p className="text-gray-400 text-xs mt-1">Mo-Fr: 08:00 - 17:00 CET</p>
                       </div>
                     </div>
 
@@ -647,9 +694,9 @@ export default function Home() {
                         <Mail className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">Email</h3>
+                        <h3 className="font-semibold text-white">E-Mail</h3>
                         <p className="text-gray-300 text-sm mt-1">info@transitpro.eu</p>
-                        <p className="text-gray-400 text-xs mt-1">Odgovaramo u roku od 24h</p>
+                        <p className="text-gray-400 text-xs mt-1">Antwort innerhalb von 24h</p>
                       </div>
                     </div>
 
@@ -660,29 +707,30 @@ export default function Home() {
                         <MapPin className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">Adresa</h3>
-                        <p className="text-gray-300 text-sm mt-1">Beč, Austrija</p>
+                        <h3 className="font-semibold text-white">{language === 'de' ? 'Adresse' : language === 'en' ? 'Address' : 'Adresa'}</h3>
+                        <p className="text-gray-300 text-sm mt-1">Wien, Österreich</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Language note */}
+                  {/* Language switcher */}
                   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                     <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
-                      🌍 7 {language === 'en' ? 'Languages' : language === 'sr' ? 'Jezika' : language === 'de' ? 'Sprachen' : 'Lingue'}
+                      🌍 7 {language === 'de' ? 'Sprachen' : language === 'en' ? 'Languages' : language === 'sr' ? 'Jezika' : language === 'fr' ? 'Langues' : language === 'it' ? 'Lingue' : language === 'ro' ? 'Limbi' : 'Езика'}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {languages.map((lang) => (
                         <button
                           key={lang.code}
                           onClick={() => setLanguage(lang.code)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
                             language === lang.code
                               ? 'bg-red-600 text-white'
                               : 'bg-white/10 text-gray-300 hover:bg-white/20'
                           }`}
                         >
-                          {lang.flag} {lang.name}
+                          <CountryFlag countryCode={languageCountryCodes[lang.code]} />
+                          {lang.name}
                         </button>
                       ))}
                     </div>
@@ -705,7 +753,6 @@ export default function Home() {
                           value={formData.name}
                           onChange={(e) => handleFormChange('name', e.target.value)}
                           className="border-gray-200 focus:ring-red-500 focus:border-red-500"
-                          placeholder="John Smith"
                         />
                       </div>
 
@@ -720,7 +767,6 @@ export default function Home() {
                           value={formData.email}
                           onChange={(e) => handleFormChange('email', e.target.value)}
                           className="border-gray-200 focus:ring-red-500 focus:border-red-500"
-                          placeholder="john@company.com"
                         />
                       </div>
 
@@ -734,7 +780,6 @@ export default function Home() {
                           value={formData.phone}
                           onChange={(e) => handleFormChange('phone', e.target.value)}
                           className="border-gray-200 focus:ring-red-500 focus:border-red-500"
-                          placeholder="+43 1 234 5678"
                         />
                       </div>
 
@@ -747,7 +792,6 @@ export default function Home() {
                           value={formData.company}
                           onChange={(e) => handleFormChange('company', e.target.value)}
                           className="border-gray-200 focus:ring-red-500 focus:border-red-500"
-                          placeholder="Company GmbH"
                         />
                       </div>
                     </div>
@@ -762,7 +806,6 @@ export default function Home() {
                         value={formData.message}
                         onChange={(e) => handleFormChange('message', e.target.value)}
                         className="border-gray-200 focus:ring-red-500 focus:border-red-500 min-h-[120px]"
-                        placeholder="..."
                       />
                     </div>
 
@@ -795,14 +838,15 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-400 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-red-600 rounded-md flex items-center justify-center">
-                <Truck className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm font-semibold text-white">
-                Transit<span className="text-red-500">Pro</span>
-              </span>
-              <span className="text-xs text-gray-500 ml-2">— {t.footerText}</span>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo-tp.png"
+                alt="Transit Pro"
+                width={100}
+                height={32}
+                className="h-7 w-auto object-contain brightness-0 invert"
+              />
+              <span className="text-xs text-gray-500">— {t.footerText}</span>
             </div>
 
             <div className="flex items-center gap-6 text-xs">

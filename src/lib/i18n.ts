@@ -1,4 +1,4 @@
-export type LanguageCode = 'sr' | 'de' | 'en' | 'ro' | 'bg' | 'fr' | 'it';
+export type LanguageCode = 'de' | 'sr' | 'en' | 'ro' | 'bg' | 'fr' | 'it';
 
 export interface Language {
   code: LanguageCode;
@@ -7,8 +7,8 @@ export interface Language {
 }
 
 export const languages: Language[] = [
-  { code: 'sr', name: 'Srpski', flag: '🇷🇸' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'sr', name: 'Srpski', flag: '🇷🇸' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'ro', name: 'Română', flag: '🇷🇴' },
   { code: 'bg', name: 'Български', flag: '🇧🇬' },
@@ -24,13 +24,13 @@ export type TranslationKeys = {
   navDocuments: string;
   navFaq: string;
   navContact: string;
-  
+
   // Hero
   heroTitle: string;
   heroSubtitle: string;
   heroCta: string;
   heroSecondaryCta: string;
-  
+
   // About
   aboutLabel: string;
   aboutTitle: string;
@@ -39,7 +39,7 @@ export type TranslationKeys = {
   aboutDescription3: string;
   aboutDescription4: string;
   aboutDescription5: string;
-  
+
   // Benefits
   benefitsLabel: string;
   benefitsTitle: string;
@@ -55,7 +55,7 @@ export type TranslationKeys = {
   benefit5Desc: string;
   benefit6Title: string;
   benefit6Desc: string;
-  
+
   // Process
   processLabel: string;
   processTitle: string;
@@ -69,7 +69,7 @@ export type TranslationKeys = {
   processStep4Desc: string;
   processStep5Title: string;
   processStep5Desc: string;
-  
+
   // Documents
   documentsLabel: string;
   documentsTitle: string;
@@ -80,7 +80,7 @@ export type TranslationKeys = {
   doc4: string;
   doc5: string;
   documentsNote: string;
-  
+
   // Regulations
   regulationsLabel: string;
   regulationsTitle: string;
@@ -90,7 +90,7 @@ export type TranslationKeys = {
   reg4: string;
   reg5: string;
   reg6: string;
-  
+
   // Pricing
   pricingLabel: string;
   pricingTitle: string;
@@ -105,7 +105,8 @@ export type TranslationKeys = {
   pricingInclude2: string;
   pricingInclude3: string;
   pricingOrderBefore: string;
-  
+  pricingOnRequest: string;
+
   // FAQ
   faqLabel: string;
   faqTitle: string;
@@ -123,11 +124,11 @@ export type TranslationKeys = {
   faq6A: string;
   faq7Q: string;
   faq7A: string;
-  
+
   // CTA
   ctaTitle: string;
   ctaSubtitle: string;
-  
+
   // Contact Form
   formTitle: string;
   formName: string;
@@ -139,7 +140,7 @@ export type TranslationKeys = {
   formSuccess: string;
   formError: string;
   formRequired: string;
-  
+
   // Footer
   footerText: string;
   footerRights: string;
@@ -148,150 +149,22 @@ export type TranslationKeys = {
 };
 
 const translations: Record<LanguageCode, TranslationKeys> = {
-  sr: {
-    // Nav
-    navHome: 'Početna',
-    navAbout: 'O nama',
-    navProcess: 'Proces',
-    navDocuments: 'Dokumenti',
-    navFaq: 'FAQ',
-    navContact: 'Kontakt',
-    
-    // Hero
-    heroTitle: 'Austrijske Tranzitne Tablice',
-    heroSubtitle: 'Brzo, pouzdano i profesionalno — obezbedite tranzitne tablice sa WA osiguranjem za vaše vozilo. Vozite legalno od tačke A do tačke B kroz Austriju.',
-    heroCta: 'Zatražite ponudu',
-    heroSecondaryCta: 'Saznajte više',
-    
-    // About
-    aboutLabel: 'O proizvodu',
-    aboutTitle: 'Šta su austrijske tranzitne tablice?',
-    aboutDescription1: 'Za vozila koja nemaju važeće tablice ili važeći tehnički pregled, možete koristiti austrijsko eksportno registrovanje, poznato i kao austrijske tranzitne tablice.',
-    aboutDescription2: 'Ove privremene tablice se isporučuju sa privremenim WA osiguranjem i namenjene su za vozila koja se izvoze i prevoze putem do zemlje odredišta.',
-    aboutDescription3: 'Napomena: zahtevi su mogući isključivo za pravna lica (kompanije).',
-    aboutDescription4: 'Ove tablice su namenjene isključivo za vožnju od tačke A do tačke B, odnosno ka ili iz Austrije. Registracija u drugoj zemlji sa ovim tablicama nije moguća — za to su potrebni originalni dokumenti vozila.',
-    aboutDescription5: 'Važeći tehnički pregled nije obavezan za izdavanje ovih tablica. Odgovornost za bezbednost i tehničko stanje vozila tokom vožnje uvek leži na kupcu/vozaču.',
-    
-    // Benefits
-    benefitsLabel: 'Prednosti',
-    benefitsTitle: 'Zašto odabrati Transit Pro?',
-    benefit1Title: 'Brza obrada',
-    benefit1Desc: 'Porudžbine primljene pre 12:00 se obrađuju istog radnog dana. Tablice i polisa osiguranja se šalju istog dana.',
-    benefit2Title: 'WA osiguranje uključeno',
-    benefit2Desc: 'Svaki set tablica dolazi sa privremenim WA osiguranjem koje važi 21 dan, obezbeđujući potpunu pokrivenost.',
-    benefit3Title: 'Bez tehničkog pregleda',
-    benefit3Desc: 'Za izdavanje tranzitnih tablica nije potreban važeći tehnički pregled, što olakšava proces za starija vozila.',
-    benefit4Title: 'Legalna vožnja',
-    benefit4Desc: 'Vozite potpuno legalno kroz Austriju i Evropu sa važećim tranzitnim tablicama i dokumentima.',
-    benefit5Title: 'Posvećena podrška',
-    benefit5Desc: 'Naš stručni tim je spreman da vam pomogne sa svim pitanjima i vodi vas kroz ceo proces.',
-    benefit6Title: 'Iskustvo i pouzdanost',
-    benefit6Desc: 'Godine iskustva u obradi tranzitnih tablica za kompanije širom Evrope.',
-    
-    // Process
-    processLabel: 'Kako funkcioniše',
-    processTitle: 'Proces u 5 jednostavnih koraka',
-    processStep1Title: 'Kontaktirajte nas',
-    processStep1Desc: 'Popunite kontakt formu ili nas pozovite da biste započeli proces. Naš tim će vam pružiti sve potrebne informacije.',
-    processStep2Title: 'Pripremite dokumenta',
-    processStep2Desc: 'Prikupite potrebne dokumente: fakturu, registracioni dokument, CoC sertifikat, punomoćje i željeni datum početka osiguranja.',
-    processStep3Title: 'Pošaljite dokumenta',
-    processStep3Desc: 'Pošaljite nam jasne, čitljive PDF skenove svih potrebnih dokumenata za obradu vašeg zahteva.',
-    processStep4Title: 'Obrada zahteva',
-    processStep4Desc: 'Mi obrađujemo vaš zahtev i izdajemo tranzitne tablice na osnovu šasiskog broja vozila.',
-    processStep5Title: 'Primite tablice',
-    processStep5Desc: 'Tablice i polisa osiguranja se šalju na vašu adresu istog dana kada je zahtev obrađen.',
-    
-    // Documents
-    documentsLabel: 'Dokumentacija',
-    documentsTitle: 'Potrebni dokumenti za zahtev',
-    documentsDescription: 'Zahtev može biti obrađen samo kada su sledeći dokumenti dostavljeni. Prihvatamo isključivo jasne, čitljive PDF skenove:',
-    doc1: 'Kopija fakture prodaje',
-    doc2: 'Kopija registracionog dokumenta (za korišćena vozila)',
-    doc3: 'Sertifikat o saglasnosti (CoC) (za nova vozila)',
-    doc4: 'Punomoćje potpisano od strane kupca',
-    doc5: 'Željeni datum početka osiguranja (važi 21 dan)',
-    documentsNote: 'Napomena: Tablice se izdaju na osnovu šasiskog broja koji ste naveli. Stoga nije moguće otkazati ili vratiti porudžbinu nakon što je zahtev podnet.',
-    
-    // Regulations
-    regulationsLabel: 'Propisi',
-    regulationsTitle: 'Propisi i pravila korišćenja',
-    reg1: 'Austrijske tranzitne tablice se mogu tražiti samo za kamione, autobuse i prikolice/reditelje evropskog porekla.',
-    reg2: 'Faktura mora biti adresirana na kompaniju — registracija na ime fizičkog lica nije moguća. Može se tražiti i EORI broj.',
-    reg3: 'Datum početka tablica i osiguranja (21 dan) je podrazumevano datum porudžbine, osim ako ne navedete drugačije.',
-    reg4: 'Tablice se smeju koristiti isključivo za vožnju ka ili iz Austrije, logičnom i razumno najkraćom rutom.',
-    reg5: 'Ove privremene tablice se ne registruju u EUCARIS sistemu, pa u nekim zemljama mogu biti sprovedene dodatne kontrole. Preporučujemo da uvek imate pri ruci originalnu registraciju vozila.',
-    reg6: 'Nepravilno ili neovlašćeno korišćenje može dovesti do mera lokalnih vlasti. Ne pružamo pravnu podršku u takvim situacijama.',
-    
-    // Pricing
-    pricingLabel: 'Cene',
-    pricingTitle: 'Transparentne cene',
-    pricingSubtitle: 'Bez skrivenih troškova — platite samo ono što koristite.',
-    pricingTruckTitle: 'Kamioni i autobusi',
-    pricingTruckDesc: 'Tranzitne tablice sa WA osiguranjem za kamione i autobuse (21 dan važenja)',
-    pricingTrailerTitle: 'Prikolice i reditelji',
-    pricingTrailerDesc: 'Tranzitne tablice sa WA osiguranjem za prikolice i reditelje (21 dan važenja)',
-    pricingDuration: 'Važenje: 21 dan',
-    pricingIncludes: 'Uključeno:',
-    pricingInclude1: 'Tranzitne tablice',
-    pricingInclude2: 'WA osiguranje',
-    pricingInclude3: 'Pošiljka istog dana',
-    pricingOrderBefore: 'Naručite pre 12:00 — obrada istog dana!',
-    
-    // FAQ
-    faqLabel: 'FAQ',
-    faqTitle: 'Često postavljana pitanja',
-    faq1Q: 'Ko može da podnese zahtev za austrijske tranzitne tablice?',
-    faq1A: 'Zahtevi su mogući isključivo za pravna lica (kompanije). Faktura mora biti adresirana na kompaniju, a može se tražiti i EORI broj.',
-    faq2Q: 'Koja vozila ispunjavaju uslove?',
-    faq2A: 'Austrijske tranzitne tablice se mogu tražiti samo za kamione, autobuse i prikolice/reditelje evropskog porekla.',
-    faq3Q: 'Da li je potreban važeći tehnički pregled?',
-    faq3A: 'Ne, važeći tehnički pregled nije obavezan za izdavanje tranzitnih tablica. Međutim, odgovornost za bezbednost i tehničko stanje vozila tokom vožnje leži na kupcu/vozaču.',
-    faq4Q: 'Koliko dugo važe tranzitne tablice?',
-    faq4A: 'Tranzitne tablice i WA osiguranje važe 21 dan od datuma početka koji navedete.',
-    faq5Q: 'Mogu li se tablice koristiti za registraciju vozila u drugoj zemlji?',
-    faq5A: 'Ne, ove tablice su namenjene isključivo za vožnju od tačke A do tačke B kroz Austriju. Registracija u drugoj zemlji nije moguća — za to su potrebni originalni dokumenti vozila.',
-    faq6Q: 'Da li mogu da otkažem porudžbinu?',
-    faq6A: 'Ne, tablice se izdaju na osnovu šasiskog broja vozila, pa nije moguće otkazati ili vratiti porudžbinu nakon što je zahtev podnet.',
-    faq7Q: 'Koliko brzo mogu dobiti tablice?',
-    faq7A: 'Porudžbine primljene pre 12:00 se obrađuju istog radnog dana. Tablice i polisa osiguranja se šalju istog dana na vašu adresu.',
-    
-    // CTA
-    ctaTitle: 'Spremni za austrijske tranzitne tablice?',
-    ctaSubtitle: 'Kontaktirajte nas danas i obezbedite legalne tranzitne tablice za vaše vozilo u najkraćem roku.',
-    
-    // Contact Form
-    formTitle: 'Kontaktirajte nas',
-    formName: 'Ime i prezime',
-    formEmail: 'Email adresa',
-    formPhone: 'Telefon',
-    formCompany: 'Kompanija',
-    formMessage: 'Poruka',
-    formSubmit: 'Pošaljite zahtev',
-    formSuccess: 'Vaš zahtev je uspešno poslat! Javićemo vam se u najkraćem roku.',
-    formError: 'Došlo je do greške. Pokušajte ponovo.',
-    formRequired: 'Ovo polje je obavezno',
-    
-    // Footer
-    footerText: 'Transit Pro — Vaš pouzdani partner za austrijske tranzitne tablice',
-    footerRights: 'Sva prava zadržana.',
-    footerPrivacy: 'Politika privatnosti',
-    footerTerms: 'Uslovi korišćenja',
-  },
-
   de: {
+    // Nav
     navHome: 'Startseite',
     navAbout: 'Über uns',
     navProcess: 'Ablauf',
     navDocuments: 'Dokumente',
     navFaq: 'FAQ',
     navContact: 'Kontakt',
-    
-    heroTitle: 'Österreichische Transitzulassung',
+
+    // Hero
+    heroTitle: 'Österreichische Transitkennzeichen',
     heroSubtitle: 'Schnell, zuverlässig und professionell — besorgen Sie Transitkennzeichen mit WA-Versicherung für Ihr Fahrzeug. Fahren Sie legal von A nach B durch Österreich.',
     heroCta: 'Angebot anfordern',
     heroSecondaryCta: 'Mehr erfahren',
-    
+
+    // About
     aboutLabel: 'Über das Produkt',
     aboutTitle: 'Was sind österreichische Transitkennzeichen?',
     aboutDescription1: 'Für Fahrzeuge, die über kein gültiges Kennzeichen oder keine gültige TÜV-Prüfung verfügen, können Sie die österreichische Exportzulassung, auch bekannt als österreichische Transitkennzeichen, nutzen.',
@@ -299,7 +172,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Hinweis: Anträge sind ausschließlich für Unternehmen möglich.',
     aboutDescription4: 'Diese Kennzeichen sind ausschließlich für eine Fahrt von A nach B, von oder nach Österreich bestimmt. Eine Zulassung in einem anderen Land ist mit diesen Kennzeichen nicht möglich — dafür sind die originalen Fahrzeugpapiere erforderlich.',
     aboutDescription5: 'Ein gültiger TÜV ist für die Ausstellung dieser Kennzeichen nicht erforderlich. Die Verantwortung für die Sicherheit und den technischen Zustand des Fahrzeugs während der Fahrt liegt immer beim Käufer/Fahrer.',
-    
+
+    // Benefits
     benefitsLabel: 'Vorteile',
     benefitsTitle: 'Warum Transit Pro wählen?',
     benefit1Title: 'Schnelle Bearbeitung',
@@ -314,7 +188,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit5Desc: 'Unser Expertenteam steht Ihnen bei allen Fragen zur Seite und begleitet Sie durch den gesamten Prozess.',
     benefit6Title: 'Erfahrung & Zuverlässigkeit',
     benefit6Desc: 'Jahrelange Erfahrung in der Abwicklung von Transitkennzeichen für Unternehmen in ganz Europa.',
-    
+
+    // Process
     processLabel: 'So funktioniert es',
     processTitle: 'Der Ablauf in 5 einfachen Schritten',
     processStep1Title: 'Kontaktieren Sie uns',
@@ -327,7 +202,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'Wir bearbeiten Ihren Antrag und stellen die Transitkennzeichen basierend auf der Fahrgestellnummer des Fahrzeugs aus.',
     processStep5Title: 'Kennzeichen erhalten',
     processStep5Desc: 'Kennzeichen und Versicherungspolice werden am selben Tag an Ihre Adresse versendet, an dem der Antrag bearbeitet wurde.',
-    
+
+    // Documents
     documentsLabel: 'Dokumentation',
     documentsTitle: 'Erforderliche Dokumente für den Antrag',
     documentsDescription: 'Der Antrag kann nur bearbeitet werden, wenn die folgenden Dokumente eingereicht werden. Wir akzeptieren ausschließlich klare, gut lesbare PDF-Scans:',
@@ -337,7 +213,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     doc4: 'Vom Käufer unterzeichnete Vollmacht',
     doc5: 'Gewünschtes Versicherungsbeginndatum (gültig für 21 Tage)',
     documentsNote: 'Hinweis: Die Kennzeichen werden auf die von Ihnen angegebene Fahrgestellnummer ausgestellt. Daher ist eine Stornierung oder Rückgabe der Bestellung nach Antragsstellung nicht möglich.',
-    
+
+    // Regulations
     regulationsLabel: 'Vorschriften',
     regulationsTitle: 'Vorschriften und Nutzungsbedingungen',
     reg1: 'Österreichische Transitkennzeichen können nur für Lkw, Busse und Anhänger/Auflieger europäischer Herkunft beantragt werden.',
@@ -346,7 +223,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg4: 'Die Kennzeichen dürfen ausschließlich für Fahrten von oder nach Österreich auf einer logischen und angemessen kürzesten Route verwendet werden.',
     reg5: 'Diese vorübergehenden Kennzeichen werden nicht im EUCARIS-System registriert, weshalb in einigen Ländern zusätzliche Kontrollen durchgeführt werden können. Wir empfehlen, immer die originalen Fahrzeugpapiere griffbereit zu haben.',
     reg6: 'Unsachgemäße oder unbefugte Nutzung kann zu Maßnahmen durch lokale Behörden führen. Wir bieten in solchen Fällen keine rechtliche Unterstützung.',
-    
+
+    // Pricing
     pricingLabel: 'Preise',
     pricingTitle: 'Transparente Preise',
     pricingSubtitle: 'Keine versteckten Kosten — Sie zahlen nur für das, was Sie nutzen.',
@@ -359,8 +237,10 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     pricingInclude1: 'Transitkennzeichen',
     pricingInclude2: 'WA-Versicherung',
     pricingInclude3: 'Same-Day-Versand',
-    pricingOrderBefore: 'Bestellen Sie vor 12:00 — Bearbeitung am selben Tag!',
-    
+    pricingOrderBefore: 'Bestellen Sie vor 12:00 Uhr — Bearbeitung am selben Tag!',
+    pricingOnRequest: 'Preis auf Anfrage',
+
+    // FAQ
     faqLabel: 'FAQ',
     faqTitle: 'Häufig gestellte Fragen',
     faq1Q: 'Wer kann österreichische Transitkennzeichen beantragen?',
@@ -377,10 +257,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'Nein, die Kennzeichen werden auf die Fahrgestellnummer des Fahrzeugs ausgestellt, daher ist eine Stornierung oder Rückgabe nach Antragsstellung nicht möglich.',
     faq7Q: 'Wie schnell erhalte ich die Kennzeichen?',
     faq7A: 'Bestellungen vor 12:00 Uhr werden am selben Werktag bearbeitet. Kennzeichen und Versicherungspolice werden noch am selben Tag an Ihre Adresse versendet.',
-    
+
+    // CTA
     ctaTitle: 'Bereit für österreichische Transitkennzeichen?',
     ctaSubtitle: 'Kontaktieren Sie uns heute und sichern Sie sich legale Transitkennzeichen für Ihr Fahrzeug in kürzester Zeit.',
-    
+
+    // Contact Form
     formTitle: 'Kontaktieren Sie uns',
     formName: 'Name',
     formEmail: 'E-Mail-Adresse',
@@ -391,11 +273,132 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'Ihre Anfrage wurde erfolgreich gesendet! Wir melden uns in Kürze bei Ihnen.',
     formError: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     formRequired: 'Dieses Feld ist erforderlich',
-    
+
+    // Footer
     footerText: 'Transit Pro — Ihr zuverlässiger Partner für österreichische Transitkennzeichen',
     footerRights: 'Alle Rechte vorbehalten.',
     footerPrivacy: 'Datenschutz',
     footerTerms: 'Nutzungsbedingungen',
+  },
+
+  sr: {
+    navHome: 'Početna',
+    navAbout: 'O nama',
+    navProcess: 'Proces',
+    navDocuments: 'Dokumenti',
+    navFaq: 'FAQ',
+    navContact: 'Kontakt',
+
+    heroTitle: 'Austrijske tranzitne tablice',
+    heroSubtitle: 'Brzo, pouzdano i profesionalno — obezbedite tranzitne tablice sa WA osiguranjem za vaše vozilo. Vozite legalno od tačke A do tačke B kroz Austriju.',
+    heroCta: 'Zatražite ponudu',
+    heroSecondaryCta: 'Saznajte više',
+
+    aboutLabel: 'O proizvodu',
+    aboutTitle: 'Šta su austrijske tranzitne tablice?',
+    aboutDescription1: 'Za vozila koja nemaju važeće tablice ili važeći tehnički pregled, možete koristiti austrijsko eksportno registrovanje, poznato i kao austrijske tranzitne tablice.',
+    aboutDescription2: 'Ove privremene tablice se isporučuju sa privremenim WA osiguranjem i namenjene su za vozila koja se izvoze i prevoze putem do zemlje odredišta.',
+    aboutDescription3: 'Napomena: zahtevi su mogući isključivo za pravna lica (kompanije).',
+    aboutDescription4: 'Ove tablice su namenjene isključivo za vožnju od tačke A do tačke B, odnosno ka ili iz Austrije. Registracija u drugoj zemlji sa ovim tablicama nije moguća — za to su potrebni originalni dokumenti vozila.',
+    aboutDescription5: 'Važeći tehnički pregled nije obavezan za izdavanje ovih tablica. Odgovornost za bezbednost i tehničko stanje vozila tokom vožnje uvek leži na kupcu/vozaču.',
+
+    benefitsLabel: 'Prednosti',
+    benefitsTitle: 'Zašto odabrati Transit Pro?',
+    benefit1Title: 'Brza obrada',
+    benefit1Desc: 'Porudžbine primljene pre 12:00 se obrađuju istog radnog dana. Tablice i polisa osiguranja se šalju istog dana.',
+    benefit2Title: 'WA osiguranje uključeno',
+    benefit2Desc: 'Svaki set tablica dolazi sa privremenim WA osiguranjem koje važi 21 dan, obezbeđujući potpunu pokrivenost.',
+    benefit3Title: 'Bez tehničkog pregleda',
+    benefit3Desc: 'Za izdavanje tranzitnih tablica nije potreban važeći tehnički pregled, što olakšava proces za starija vozila.',
+    benefit4Title: 'Legalna vožnja',
+    benefit4Desc: 'Vozite potpuno legalno kroz Austriju i Evropu sa važećim tranzitnim tablicama i dokumentima.',
+    benefit5Title: 'Posvećena podrška',
+    benefit5Desc: 'Naš stručni tim je spreman da vam pomogne sa svim pitanjima i vodi vas kroz ceo proces.',
+    benefit6Title: 'Iskustvo i pouzdanost',
+    benefit6Desc: 'Godine iskustva u obradi tranzitnih tablica za kompanije širom Evrope.',
+
+    processLabel: 'Kako funkcioniše',
+    processTitle: 'Proces u 5 jednostavnih koraka',
+    processStep1Title: 'Kontaktirajte nas',
+    processStep1Desc: 'Popunite kontakt formu ili nas pozovite da biste započeli proces. Naš tim će vam pružiti sve potrebne informacije.',
+    processStep2Title: 'Pripremite dokumenta',
+    processStep2Desc: 'Prikupite potrebne dokumente: fakturu, registracioni dokument, CoC sertifikat, punomoćje i željeni datum početka osiguranja.',
+    processStep3Title: 'Pošaljite dokumenta',
+    processStep3Desc: 'Pošaljite nam jasne, čitljive PDF skenove svih potrebnih dokumenata za obradu vašeg zahteva.',
+    processStep4Title: 'Obrada zahteva',
+    processStep4Desc: 'Mi obrađujemo vaš zahtev i izdajemo tranzitne tablice na osnovu šasiskog broja vozila.',
+    processStep5Title: 'Primite tablice',
+    processStep5Desc: 'Tablice i polisa osiguranja se šalju na vašu adresu istog dana kada je zahtev obrađen.',
+
+    documentsLabel: 'Dokumentacija',
+    documentsTitle: 'Potrebni dokumenti za zahtev',
+    documentsDescription: 'Zahtev može biti obrađen samo kada su sledeći dokumenti dostavljeni. Prihvatamo isključivo jasne, čitljive PDF skenove:',
+    doc1: 'Kopija fakture prodaje',
+    doc2: 'Kopija registracionog dokumenta (za korišćena vozila)',
+    doc3: 'Sertifikat o saglasnosti (CoC) (za nova vozila)',
+    doc4: 'Punomoćje potpisano od strane kupca',
+    doc5: 'Željeni datum početka osiguranja (važi 21 dan)',
+    documentsNote: 'Napomena: Tablice se izdaju na osnovu šasiskog broja koji ste naveli. Stoga nije moguće otkazati ili vratiti porudžbinu nakon što je zahtev podnet.',
+
+    regulationsLabel: 'Propisi',
+    regulationsTitle: 'Propisi i pravila korišćenja',
+    reg1: 'Austrijske tranzitne tablice se mogu tražiti samo za kamione, autobuse i prikolice/reditelje evropskog porekla.',
+    reg2: 'Faktura mora biti adresirana na kompaniju — registracija na ime fizičkog lica nije moguća. Može se tražiti i EORI broj.',
+    reg3: 'Datum početka tablica i osiguranja (21 dan) je podrazumevano datum porudžbine, osim ako ne navedete drugačije.',
+    reg4: 'Tablice se smeju koristiti isključivo za vožnju ka ili iz Austrije, logičnom i razumno najkraćom rutom.',
+    reg5: 'Ove privremene tablice se ne registruju u EUCARIS sistemu, pa u nekim zemljama mogu biti sprovedene dodatne kontrole. Preporučujemo da uvek imate pri ruci originalnu registraciju vozila.',
+    reg6: 'Nepravilno ili neovlašćeno korišćenje može dovesti do mera lokalnih vlasti. Ne pružamo pravnu podršku u takvim situacijama.',
+
+    pricingLabel: 'Cene',
+    pricingTitle: 'Transparentne cene',
+    pricingSubtitle: 'Bez skrivenih troškova — platite samo ono što koristite.',
+    pricingTruckTitle: 'Kamioni i autobusi',
+    pricingTruckDesc: 'Tranzitne tablice sa WA osiguranjem za kamione i autobuse (21 dan važenja)',
+    pricingTrailerTitle: 'Prikolice i reditelji',
+    pricingTrailerDesc: 'Tranzitne tablice sa WA osiguranjem za prikolice i reditelje (21 dan važenja)',
+    pricingDuration: 'Važenje: 21 dan',
+    pricingIncludes: 'Uključeno:',
+    pricingInclude1: 'Tranzitne tablice',
+    pricingInclude2: 'WA osiguranje',
+    pricingInclude3: 'Pošiljka istog dana',
+    pricingOrderBefore: 'Naručite pre 12:00 — obrada istog dana!',
+    pricingOnRequest: 'Cena na upit',
+
+    faqLabel: 'FAQ',
+    faqTitle: 'Često postavljana pitanja',
+    faq1Q: 'Ko može da podnese zahtev za austrijske tranzitne tablice?',
+    faq1A: 'Zahtevi su mogući isključivo za pravna lica (kompanije). Faktura mora biti adresirana na kompaniju, a može se tražiti i EORI broj.',
+    faq2Q: 'Koja vozila ispunjavaju uslove?',
+    faq2A: 'Austrijske tranzitne tablice se mogu tražiti samo za kamione, autobuse i prikolice/reditelje evropskog porekla.',
+    faq3Q: 'Da li je potreban važeći tehnički pregled?',
+    faq3A: 'Ne, važeći tehnički pregled nije obavezan za izdavanje tranzitnih tablica. Međutim, odgovornost za bezbednost i tehničko stanje vozila tokom vožnje leži na kupcu/vozaču.',
+    faq4Q: 'Koliko dugo važe tranzitne tablice?',
+    faq4A: 'Tranzitne tablice i WA osiguranje važe 21 dan od datuma početka koji navedete.',
+    faq5Q: 'Mogu li se tablice koristiti za registraciju vozila u drugoj zemlji?',
+    faq5A: 'Ne, ove tablice su namenjene isključivo za vožnju od tačke A do tačke B kroz Austriju. Registracija u drugoj zemlji nije moguća — za to su potrebni originalni dokumenti vozila.',
+    faq6Q: 'Da li mogu da otkažem porudžbinu?',
+    faq6A: 'Ne, tablice se izdaju na osnovu šasiskog broja vozila, pa nije moguće otkazati ili vratiti porudžbinu nakon što je zahtev podnet.',
+    faq7Q: 'Koliko brzo mogu dobiti tablice?',
+    faq7A: 'Porudžbine primljene pre 12:00 se obrađuju istog radnog dana. Tablice i polisa osiguranja se šalju istog dana na vašu adresu.',
+
+    ctaTitle: 'Spremni za austrijske tranzitne tablice?',
+    ctaSubtitle: 'Kontaktirajte nas danas i obezbedite legalne tranzitne tablice za vaše vozilo u najkraćem roku.',
+
+    formTitle: 'Kontaktirajte nas',
+    formName: 'Ime i prezime',
+    formEmail: 'Imejl adresa',
+    formPhone: 'Telefon',
+    formCompany: 'Kompanija',
+    formMessage: 'Poruka',
+    formSubmit: 'Pošaljite zahtev',
+    formSuccess: 'Vaš zahtev je uspešno poslat! Javićemo vam se u najkraćem roku.',
+    formError: 'Došlo je do greške. Pokušajte ponovo.',
+    formRequired: 'Ovo polje je obavezno',
+
+    footerText: 'Transit Pro — Vaš pouzdani partner za austrijske tranzitne tablice',
+    footerRights: 'Sva prava zadržana.',
+    footerPrivacy: 'Politika privatnosti',
+    footerTerms: 'Uslovi korišćenja',
   },
 
   en: {
@@ -405,12 +408,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navDocuments: 'Documents',
     navFaq: 'FAQ',
     navContact: 'Contact',
-    
+
     heroTitle: 'Austrian Transit Plates',
     heroSubtitle: 'Fast, reliable, and professional — get transit plates with WA insurance for your vehicle. Drive legally from point A to point B through Austria.',
     heroCta: 'Request a Quote',
     heroSecondaryCta: 'Learn More',
-    
+
     aboutLabel: 'About the Product',
     aboutTitle: 'What are Austrian Transit Plates?',
     aboutDescription1: 'For vehicles that do not have valid registration plates or a valid technical inspection, you can use the Austrian export registration, also known as Austrian transit plates.',
@@ -418,7 +421,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Note: Applications are only possible for businesses (companies).',
     aboutDescription4: 'These plates are exclusively intended for driving from point A to point B, to or from Austria. Registration in another country is not possible with these plates — original vehicle documents are required for that.',
     aboutDescription5: 'A valid technical inspection is not required for the issuance of these plates. The responsibility for the safety and technical condition of the vehicle during the journey always lies with the buyer/driver.',
-    
+
     benefitsLabel: 'Benefits',
     benefitsTitle: 'Why Choose Transit Pro?',
     benefit1Title: 'Fast Processing',
@@ -433,7 +436,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit5Desc: 'Our expert team is ready to help you with all your questions and guide you through the entire process.',
     benefit6Title: 'Experience & Reliability',
     benefit6Desc: 'Years of experience in processing transit plates for companies across Europe.',
-    
+
     processLabel: 'How It Works',
     processTitle: 'The Process in 5 Simple Steps',
     processStep1Title: 'Contact Us',
@@ -446,7 +449,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'We process your application and issue the transit plates based on the vehicle\'s chassis number.',
     processStep5Title: 'Receive Plates',
     processStep5Desc: 'Plates and insurance policy are shipped to your address on the same day the application is processed.',
-    
+
     documentsLabel: 'Documentation',
     documentsTitle: 'Required Documents for Application',
     documentsDescription: 'The application can only be processed when the following documents are submitted. We accept only clear, readable PDF scans:',
@@ -456,7 +459,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     doc4: 'Power of attorney signed by the buyer',
     doc5: 'Desired insurance start date (valid for 21 days)',
     documentsNote: 'Note: The plates are issued based on the chassis number you provide. Therefore, it is not possible to cancel or return an order once the application has been submitted.',
-    
+
     regulationsLabel: 'Regulations',
     regulationsTitle: 'Regulations and Usage Rules',
     reg1: 'Austrian transit plates can only be requested for trucks, buses, and trailers/semi-trailers of European origin.',
@@ -464,8 +467,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg3: 'The start date of the plates and insurance (21 days) defaults to the order date unless you specify otherwise.',
     reg4: 'The plates may only be used for driving to or from Austria via a logical and reasonably shortest route.',
     reg5: 'These temporary plates are not registered in the EUCARIS system, so additional checks may be carried out in some countries. We recommend always keeping the original vehicle registration at hand.',
-    reg6: 'Improper or unauthorized use may result in measures by local authorities. We do not provide legal support in such situations.',
-    
+    reg6: 'Improper or unauthorised use may result in measures by local authorities. We do not provide legal support in such situations.',
+
     pricingLabel: 'Pricing',
     pricingTitle: 'Transparent Pricing',
     pricingSubtitle: 'No hidden costs — pay only for what you use.',
@@ -479,7 +482,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     pricingInclude2: 'WA insurance',
     pricingInclude3: 'Same-day shipping',
     pricingOrderBefore: 'Order before 12:00 — processed the same day!',
-    
+    pricingOnRequest: 'Price on request',
+
     faqLabel: 'FAQ',
     faqTitle: 'Frequently Asked Questions',
     faq1Q: 'Who can apply for Austrian transit plates?',
@@ -496,10 +500,10 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'No, the plates are issued based on the vehicle\'s chassis number, so it is not possible to cancel or return an order once the application has been submitted.',
     faq7Q: 'How quickly can I receive the plates?',
     faq7A: 'Orders received before 12:00 are processed the same business day. Plates and insurance policy are shipped to your address the same day.',
-    
+
     ctaTitle: 'Ready for Austrian Transit Plates?',
     ctaSubtitle: 'Contact us today and secure legal transit plates for your vehicle in the shortest possible time.',
-    
+
     formTitle: 'Contact Us',
     formName: 'Full Name',
     formEmail: 'Email Address',
@@ -510,7 +514,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'Your request has been successfully sent! We will get back to you shortly.',
     formError: 'An error occurred. Please try again.',
     formRequired: 'This field is required',
-    
+
     footerText: 'Transit Pro — Your reliable partner for Austrian transit plates',
     footerRights: 'All rights reserved.',
     footerPrivacy: 'Privacy Policy',
@@ -524,12 +528,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navDocuments: 'Documente',
     navFaq: 'FAQ',
     navContact: 'Contact',
-    
-    heroTitle: 'Plăci de Tranzit Austriece',
+
+    heroTitle: 'Plăci de tranzit austriece',
     heroSubtitle: 'Rapid, fiabil și profesional — obțineți plăci de tranzit cu asigurare WA pentru vehiculul dumneavoastră. Conduceți legal din punctul A în punctul B prin Austria.',
     heroCta: 'Solicitați o ofertă',
     heroSecondaryCta: 'Aflați mai multe',
-    
+
     aboutLabel: 'Despre produs',
     aboutTitle: 'Ce sunt plăcile de tranzit austriece?',
     aboutDescription1: 'Pentru vehiculele care nu dispun de plăci de înmatriculare valabile sau de o inspecție tehnică valabilă, puteți utiliza înmatricularea de export austriacă, cunoscută și sub numele de plăci de tranzit austriece.',
@@ -537,7 +541,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Notă: Cererile sunt posibile exclusiv pentru companii (persoane juridice).',
     aboutDescription4: 'Aceste plăci sunt destinate exclusiv conducerii din punctul A în punctul B, spre sau din Austria. Înmatricularea într-o altă țară nu este posibilă cu aceste plăci — pentru aceasta sunt necesare documentele originale ale vehiculului.',
     aboutDescription5: 'O inspecție tehnică valabilă nu este obligatorie pentru eliberarea acestor plăci. Responsabilitatea pentru siguranța și starea tehnică a vehiculului în timpul călătoriei revine întotdeauna cumpărătorului/conducătorului.',
-    
+
     benefitsLabel: 'Avantaje',
     benefitsTitle: 'De ce să alegeți Transit Pro?',
     benefit1Title: 'Procesare rapidă',
@@ -552,7 +556,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit5Desc: 'Echipa noastră de experți este pregătită să vă ajute cu toate întrebările și să vă ghideze prin întregul proces.',
     benefit6Title: 'Experiență și fiabilitate',
     benefit6Desc: 'Ani de experiență în procesarea plăcilor de tranzit pentru companii din întreaga Europă.',
-    
+
     processLabel: 'Cum funcționează',
     processTitle: 'Procesul în 5 pași simpli',
     processStep1Title: 'Contactați-ne',
@@ -565,17 +569,17 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'Procesăm cererea dumneavoastră și eliberăm plăcile de tranzit pe baza numărului de șasiu al vehiculului.',
     processStep5Title: 'Primiți plăcile',
     processStep5Desc: 'Plăcile și polița de asigurare sunt expediate la adresa dumneavoastră în aceeași zi în care cererea a fost procesată.',
-    
+
     documentsLabel: 'Documentație',
     documentsTitle: 'Documente necesare pentru cerere',
     documentsDescription: 'Cererea poate fi procesată doar atunci când sunt trimise următoarele documente. Acceptăm exclusiv scanări PDF clare și lizibile:',
     doc1: 'Copie a facturii de vânzare',
-    doc2: 'Copie a documentului de înmatriculare (pentru vehiculele second-hand)',
+    doc2: 'Copie a documentului de înmatriculare (pentru vehiculele rulate)',
     doc3: 'Certificat de conformitate (CoC) (pentru vehicule noi)',
     doc4: 'Procură semnată de cumpărător',
     doc5: 'Data de început dorită a asigurării (valabilă 21 de zile)',
     documentsNote: 'Notă: Plăcile sunt eliberate pe baza numărului de șasiu pe care îl furnizați. Prin urmare, nu este posibil să anulați sau să returnați o comandă după ce cererea a fost depusă.',
-    
+
     regulationsLabel: 'Regulamente',
     regulationsTitle: 'Regulamente și reguli de utilizare',
     reg1: 'Plăcile de tranzit austriece pot fi solicitate doar pentru camioane, autobuze și remorci/semiremorci de origine europeană.',
@@ -584,13 +588,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg4: 'Plăcile pot fi utilizate exclusiv pentru condus spre sau din Austria pe o rută logică și rezonabil cea mai scurtă.',
     reg5: 'Aceste plăci temporare nu sunt înregistrate în sistemul EUCARIS, deci pot fi efectuate controale suplimentare în unele țări. Recomandăm să aveți întotdeauna la îndemână înmatricularea originală a vehiculului.',
     reg6: 'Utilizarea necorespunzătoare sau neautorizată poate duce la măsuri luate de autoritățile locale. Nu oferim asistență juridică în astfel de situații.',
-    
+
     pricingLabel: 'Prețuri',
     pricingTitle: 'Prețuri transparente',
     pricingSubtitle: 'Fără costuri ascunse — plătiți doar pentru ceea ce utilizați.',
-    pricingTruckTitle: 'Camioane & Autobuze',
+    pricingTruckTitle: 'Camioane și autobuze',
     pricingTruckDesc: 'Plăci de tranzit cu asigurare WA pentru camioane și autobuze (valabilitate 21 de zile)',
-    pricingTrailerTitle: 'Remorci & Semiremorci',
+    pricingTrailerTitle: 'Remorci și semiremorci',
     pricingTrailerDesc: 'Plăci de tranzit cu asigurare WA pentru remorci și semiremorci (valabilitate 21 de zile)',
     pricingDuration: 'Valabilitate: 21 de zile',
     pricingIncludes: 'Include:',
@@ -598,7 +602,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     pricingInclude2: 'Asigurare WA',
     pricingInclude3: 'Expediere în aceeași zi',
     pricingOrderBefore: 'Comandați înainte de 12:00 — procesare în aceeași zi!',
-    
+    pricingOnRequest: 'Preț la cerere',
+
     faqLabel: 'FAQ',
     faqTitle: 'Întrebări frecvente',
     faq1Q: 'Cine poate solicita plăci de tranzit austriece?',
@@ -615,13 +620,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'Nu, plăcile sunt eliberate pe baza numărului de șasiu al vehiculului, deci nu este posibil să anulați sau returnați o comandă după depunerea cererii.',
     faq7Q: 'Cât de repede pot primi plăcile?',
     faq7A: 'Comenzile primite înainte de 12:00 sunt procesate în aceeași zi lucrătoare. Plăcile și polița de asigurare sunt expediate la adresa dumneavoastră în aceeași zi.',
-    
+
     ctaTitle: 'Sunteți pregătit pentru plăci de tranzit austriece?',
     ctaSubtitle: 'Contactați-ne astăzi și asigurați-vă plăci de tranzit legale pentru vehiculul dumneavoastră în cel mai scurt timp.',
-    
+
     formTitle: 'Contactați-ne',
     formName: 'Nume complet',
-    formEmail: 'Adresa de email',
+    formEmail: 'Adresa de e-mail',
     formPhone: 'Telefon',
     formCompany: 'Companie',
     formMessage: 'Mesaj',
@@ -629,7 +634,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'Cererea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.',
     formError: 'A apărut o eroare. Vă rugăm să încercați din nou.',
     formRequired: 'Acest câmp este obligatoriu',
-    
+
     footerText: 'Transit Pro — Partenerul dumneavoastră de încredere pentru plăci de tranzit austriece',
     footerRights: 'Toate drepturile rezervate.',
     footerPrivacy: 'Politica de confidențialitate',
@@ -643,12 +648,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navDocuments: 'Документи',
     navFaq: 'Въпроси',
     navContact: 'Контакт',
-    
+
     heroTitle: 'Австрийски транзитни таблици',
     heroSubtitle: 'Бързо, надеждно и професионално — осигурете си транзитни таблици с WA застраховка за вашия автомобил. Шофирайте законно от точка А до точка Б през Австрия.',
     heroCta: 'Заявете оферта',
     heroSecondaryCta: 'Научете повече',
-    
+
     aboutLabel: 'За продукта',
     aboutTitle: 'Какво са австрийските транзитни таблици?',
     aboutDescription1: 'За превозни средства, които нямат валидни регистрационни таблици или валиден технически преглед, можете да използвате австрийската експортна регистрация, известна още като австрийски транзитни таблици.',
@@ -656,7 +661,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Забележка: Заявления са възможни само за юридически лица (компании).',
     aboutDescription4: 'Тези таблици са предназначени изключително за шофиране от точка А до точка Б, до или от Австрия. Регистрация в друга страна с тези таблици не е възможна — за това са необходими оригиналните документи на превозното средство.',
     aboutDescription5: 'Валиден технически преглед не е задължителен за издаване на тези таблици. Отговорността за безопасността и техническото състояние на превозното средство по време на пътуването винаги лежи върху купувача/шофьора.',
-    
+
     benefitsLabel: 'Предимства',
     benefitsTitle: 'Защо да изберете Transit Pro?',
     benefit1Title: 'Бърза обработка',
@@ -670,8 +675,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit5Title: 'Специализирана поддръжка',
     benefit5Desc: 'Нашият експертен екип е готов да ви помогне с всички въпроси и да ви преведе през целия процес.',
     benefit6Title: 'Опит и надеждност',
-    benefit6Desc: 'Години на опит в обработката на транзитни таблици за компании в цяла Европа.',
-    
+    benefit6Desc: 'Години опит в обработката на транзитни таблици за компании в цяла Европа.',
+
     processLabel: 'Как работи',
     processTitle: 'Процесът в 5 прости стъпки',
     processStep1Title: 'Свържете се с нас',
@@ -684,7 +689,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'Ние обработваме вашата заявка и издаваме транзитните таблици въз основа на шасийния номер на превозното средство.',
     processStep5Title: 'Получете таблиците',
     processStep5Desc: 'Таблиците и застрахователната полица се изпращат на вашия адрес същия ден, в който заявката е обработена.',
-    
+
     documentsLabel: 'Документация',
     documentsTitle: 'Необходими документи за заявка',
     documentsDescription: 'Заявката може да бъде обработена само когато са предоставени следните документи. Приемаме само ясни, четливи PDF сканирания:',
@@ -693,8 +698,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     doc3: 'Сертификат за съответствие (CoC) (за нови превозни средства)',
     doc4: 'Пълномощно, подписано от купувача',
     doc5: 'Желана дата на начало на застраховката (валидна 21 дни)',
-    documentsNote: 'Забележка: Таблиците се издават въз основа на шасийния номер, който сте посочили. Следователно не е възможно да отмените или върнете поръчка след като заявката е подадена.',
-    
+    documentsNote: 'Забележка: Таблиците се издават въз основа на шасийния номер, който сте посочили. Следователно не е възможно да отмените или върнете поръчка, след като заявката е подадена.',
+
     regulationsLabel: 'Наредби',
     regulationsTitle: 'Наредби и правила за ползване',
     reg1: 'Австрийски транзитни таблици могат да се заявяват само за камиони, автобуси и ремаркета/полуремаркета от европейски произход.',
@@ -703,13 +708,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg4: 'Таблиците могат да се използват само за шофиране до или от Австрия по логичен и разумно най-кратък маршрут.',
     reg5: 'Тези временни таблици не се регистрират в системата EUCARIS, така че в някои страни могат да се извършват допълнителни проверки. Препоръчваме винаги да имате под ръка оригиналната регистрация на превозното средство.',
     reg6: 'Неправилна или неоторизирана употреба може да доведе до мерки от местните власти. Не осигуряваме правна подкрепа в такива ситуации.',
-    
+
     pricingLabel: 'Цени',
     pricingTitle: 'Прозрачни цени',
     pricingSubtitle: 'Без скрити разходи — плащате само за това, което използвате.',
-    pricingTruckTitle: 'Камиони & Автобуси',
+    pricingTruckTitle: 'Камиони и автобуси',
     pricingTruckDesc: 'Транзитни таблици с WA застраховка за камиони и автобуси (валидност 21 дни)',
-    pricingTrailerTitle: 'Ремаркета & Полуремаркета',
+    pricingTrailerTitle: 'Ремаркета и полуремаркета',
     pricingTrailerDesc: 'Транзитни таблици с WA застраховка за ремаркета и полуремаркета (валидност 21 дни)',
     pricingDuration: 'Валидност: 21 дни',
     pricingIncludes: 'Включва:',
@@ -717,16 +722,17 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     pricingInclude2: 'WA застраховка',
     pricingInclude3: 'Изпращане същия ден',
     pricingOrderBefore: 'Поръчайте преди 12:00 — обработка същия ден!',
-    
+    pricingOnRequest: 'Цена по заявка',
+
     faqLabel: 'Въпроси',
     faqTitle: 'Често задавани въпроси',
     faq1Q: 'Кой може да подава заявка за австрийски транзитни таблици?',
     faq1A: 'Заявления са възможни само за компании. Фактурата трябва да бъде адресирана до компания, а може да се изиска и EORI номер.',
     faq2Q: 'Кои превозни средства са допустими?',
-    faq2A: 'Австрийски транзитни таблиции могат да се заявяват само за камиони, автобуси и ремаркета/полуремаркета от европейски произход.',
+    faq2A: 'Австрийски транзитни таблици могат да се заявяват само за камиони, автобуси и ремаркета/полуремаркета от европейски произход.',
     faq3Q: 'Необходим ли е валиден технически преглед?',
-    faq3A: 'Не, валиден технически преглед не е необходим за издаване на транзитните таблиции. Въпреки това, отговорността за безопасността и техническото състояние на превозното средство лежи върху купувача/шофьора.',
-    faq4Q: 'Колко дълго са валидни транзитните таблиции?',
+    faq3A: 'Не, валиден технически преглед не е необходим за издаване на транзитните таблици. Въпреки това, отговорността за безопасността и техническото състояние на превозното средство лежи върху купувача/шофьора.',
+    faq4Q: 'Колко дълго са валидни транзитните таблици?',
     faq4A: 'Транзитните таблиции и WA застраховката са валидни 21 дни от началната дата, която посочите.',
     faq5Q: 'Могат ли таблициите да се използват за регистрация на превозното средство в друга страна?',
     faq5A: 'Не, тези таблиции са предназначени изключително за шофиране от точка А до точка Б през Австрия. Регистрация в друга страна не е възможна — за това са необходими оригиналните документи на превозното средство.',
@@ -734,10 +740,10 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'Не, таблициите се издават въз основа на шасийния номер на превозното средство, така че не е възможно да отмените или върнете поръчка след като заявката е подадена.',
     faq7Q: 'Колко бързо мога да получа таблициите?',
     faq7A: 'Поръчки, получени преди 12:00, се обработват същия работен ден. Таблиците и застрахователната полица се изпращат на вашия адрес същия ден.',
-    
-    ctaTitle: 'Готови ли сте за австрийски транзитни таблиции?',
-    ctaSubtitle: 'Свържете се с нас днес и осигурете законни транзитни таблиции за вашия автомобил в най-кратък срок.',
-    
+
+    ctaTitle: 'Готови ли сте за австрийски транзитни таблици?',
+    ctaSubtitle: 'Свържете се с нас днес и осигурете законни транзитни таблици за вашия автомобил в най-кратък срок.',
+
     formTitle: 'Свържете се с нас',
     formName: 'Пълно име',
     formEmail: 'Имейл адрес',
@@ -748,8 +754,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'Вашата заявка е изпратена успешно! Ще се свържем с вас в най-кратък срок.',
     formError: 'Възникна грешка. Моля, опитайте отново.',
     formRequired: 'Това поле е задължително',
-    
-    footerText: 'Transit Pro — Вашият надежден партньор за австрийски транзитни таблиции',
+
+    footerText: 'Transit Pro — Вашият надежден партньор за австрийски транзитни таблици',
     footerRights: 'Всички права запазени.',
     footerPrivacy: 'Политика за поверителност',
     footerTerms: 'Условия за ползване',
@@ -762,12 +768,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navDocuments: 'Documents',
     navFaq: 'FAQ',
     navContact: 'Contact',
-    
-    heroTitle: 'Plaques de Transit Autrichiennes',
+
+    heroTitle: 'Plaques de transit autrichiennes',
     heroSubtitle: 'Rapide, fiable et professionnel — obtenez des plaques de transit avec assurance WA pour votre véhicule. Conduisez légalement du point A au point B à travers l\'Autriche.',
     heroCta: 'Demander un devis',
     heroSecondaryCta: 'En savoir plus',
-    
+
     aboutLabel: 'À propos du produit',
     aboutTitle: 'Que sont les plaques de transit autrichiennes ?',
     aboutDescription1: 'Pour les véhicules qui ne disposent pas de plaques d\'immatriculation valides ou d\'un contrôle technique valide, vous pouvez utiliser l\'immatriculation d\'exportation autrichienne, également connue sous le nom de plaques de transit autrichiennes.',
@@ -775,22 +781,22 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Remarque : Les demandes sont possibles uniquement pour les entreprises (sociétés).',
     aboutDescription4: 'Ces plaques sont exclusivement destinées à la conduite du point A au point B, vers ou depuis l\'Autriche. L\'immatriculation dans un autre pays n\'est pas possible avec ces plaques — les documents originaux du véhicule sont nécessaires pour cela.',
     aboutDescription5: 'Un contrôle technique valide n\'est pas obligatoire pour la délivrance de ces plaques. La responsabilité de la sécurité et de l\'état technique du véhicule pendant le trajet incombe toujours à l\'acheteur/conducteur.',
-    
+
     benefitsLabel: 'Avantages',
     benefitsTitle: 'Pourquoi choisir Transit Pro ?',
     benefit1Title: 'Traitement rapide',
-    benefit1Desc: 'Les commandes reçues avant 12h00 sont traitées le même jour ouvrable. Les plaques et la police d\'assurance sont expédiées le jour même.',
+    benefit1Desc: 'Les commandes reçues avant 12 h 00 sont traitées le même jour ouvrable. Les plaques et la police d\'assurance sont expédiées le jour même.',
     benefit2Title: 'Assurance WA incluse',
     benefit2Desc: 'Chaque jeu de plaques est accompagné d\'une assurance WA temporaire valable 21 jours, offrant une couverture complète.',
     benefit3Title: 'Sans contrôle technique',
-    benefit3Desc: 'Un contrôle technique valide n\'est pas requis pour la délivrance des plaques de transit, ce qui simplifie le processus pour les véhicules plus anciens.',
+    benefit3Desc: 'Un contrôle technique valide n\'est pas requis pour la délivrance des plaques de transit, ce qui simplifie la démarche pour les véhicules plus anciens.',
     benefit4Title: 'Conduite légale',
     benefit4Desc: 'Conduisez en toute légalité à travers l\'Autriche et l\'Europe avec des plaques de transit et des documents valides.',
     benefit5Title: 'Support dédié',
     benefit5Desc: 'Notre équipe d\'experts est prête à vous aider pour toutes vos questions et à vous guider tout au long du processus.',
     benefit6Title: 'Expérience et fiabilité',
     benefit6Desc: 'Des années d\'expérience dans le traitement des plaques de transit pour les entreprises à travers l\'Europe.',
-    
+
     processLabel: 'Comment ça marche',
     processTitle: 'Le processus en 5 étapes simples',
     processStep1Title: 'Contactez-nous',
@@ -803,7 +809,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'Nous traitons votre demande et délivrons les plaques de transit sur la base du numéro de châssis du véhicule.',
     processStep5Title: 'Recevez les plaques',
     processStep5Desc: 'Les plaques et la police d\'assurance sont expédiées à votre adresse le jour même du traitement de la demande.',
-    
+
     documentsLabel: 'Documentation',
     documentsTitle: 'Documents requis pour la demande',
     documentsDescription: 'La demande ne peut être traitée que lorsque les documents suivants sont soumis. Nous acceptons exclusivement les scans PDF clairs et lisibles :',
@@ -813,7 +819,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     doc4: 'Procuration signée par l\'acheteur',
     doc5: 'Date de début d\'assurance souhaitée (valable 21 jours)',
     documentsNote: 'Remarque : Les plaques sont délivrées sur la base du numéro de châssis que vous fournissez. Par conséquent, il n\'est pas possible d\'annuler ou de retourner une commande une fois la demande soumise.',
-    
+
     regulationsLabel: 'Règlementation',
     regulationsTitle: 'Règlementation et règles d\'utilisation',
     reg1: 'Les plaques de transit autrichiennes ne peuvent être demandées que pour les camions, bus et remorques/semi-remorques d\'origine européenne.',
@@ -822,21 +828,22 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg4: 'Les plaques ne peuvent être utilisées que pour la conduite vers ou depuis l\'Autriche via un itinéraire logique et raisonnablement le plus court.',
     reg5: 'Ces plaques temporaires ne sont pas enregistrées dans le système EUCARIS, des contrôles supplémentaires peuvent donc être effectués dans certains pays. Nous recommandons de toujours garder le certificat d\'immatriculation original du véhicule à portée de main.',
     reg6: 'Une utilisation incorrecte ou non autorisée peut entraîner des mesures par les autorités locales. Nous ne fournissons pas de soutien juridique dans de telles situations.',
-    
+
     pricingLabel: 'Tarifs',
     pricingTitle: 'Tarifs transparents',
     pricingSubtitle: 'Pas de coûts cachés — payez uniquement ce que vous utilisez.',
-    pricingTruckTitle: 'Camions & Bus',
+    pricingTruckTitle: 'Camions et bus',
     pricingTruckDesc: 'Plaques de transit avec assurance WA pour camions et bus (validité 21 jours)',
-    pricingTrailerTitle: 'Remorques & Semi-remorques',
+    pricingTrailerTitle: 'Remorques et semi-remorques',
     pricingTrailerDesc: 'Plaques de transit avec assurance WA pour remorques et semi-remorques (validité 21 jours)',
     pricingDuration: 'Validité : 21 jours',
     pricingIncludes: 'Inclus :',
     pricingInclude1: 'Plaques de transit',
     pricingInclude2: 'Assurance WA',
     pricingInclude3: 'Expédition le jour même',
-    pricingOrderBefore: 'Commandez avant 12h00 — traitement le jour même !',
-    
+    pricingOrderBefore: 'Commandez avant 12 h 00 — traitement le jour même !',
+    pricingOnRequest: 'Prix sur demande',
+
     faqLabel: 'FAQ',
     faqTitle: 'Questions fréquemment posées',
     faq1Q: 'Qui peut demander des plaques de transit autrichiennes ?',
@@ -852,11 +859,11 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6Q: 'Puis-je annuler ma commande ?',
     faq6A: 'Non, les plaques sont délivrées sur la base du numéro de châssis du véhicule, il n\'est donc pas possible d\'annuler ou de retourner une commande une fois la demande soumise.',
     faq7Q: 'Combien de temps faut-il pour recevoir les plaques ?',
-    faq7A: 'Les commandes reçues avant 12h00 sont traitées le même jour ouvrable. Les plaques et la police d\'assurance sont expédiées à votre adresse le jour même.',
-    
+    faq7A: 'Les commandes reçues avant 12 h 00 sont traitées le même jour ouvrable. Les plaques et la police d\'assurance sont expédiées à votre adresse le jour même.',
+
     ctaTitle: 'Prêt pour les plaques de transit autrichiennes ?',
     ctaSubtitle: 'Contactez-nous aujourd\'hui et obtenez des plaques de transit légales pour votre véhicule dans les plus brefs délais.',
-    
+
     formTitle: 'Contactez-nous',
     formName: 'Nom complet',
     formEmail: 'Adresse e-mail',
@@ -867,7 +874,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'Votre demande a été envoyée avec succès ! Nous vous recontacterons dans les plus brefs délais.',
     formError: 'Une erreur est survenue. Veuillez réessayer.',
     formRequired: 'Ce champ est obligatoire',
-    
+
     footerText: 'Transit Pro — Votre partenaire fiable pour les plaques de transit autrichiennes',
     footerRights: 'Tous droits réservés.',
     footerPrivacy: 'Politique de confidentialité',
@@ -881,12 +888,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     navDocuments: 'Documenti',
     navFaq: 'FAQ',
     navContact: 'Contatto',
-    
-    heroTitle: 'Targhe di Transito Austriache',
+
+    heroTitle: 'Targhe di transito austriache',
     heroSubtitle: 'Veloce, affidabile e professionale — ottieni targhe di transito con assicurazione WA per il tuo veicolo. Guida legalmente dal punto A al punto B attraverso l\'Austria.',
     heroCta: 'Richiedi preventivo',
     heroSecondaryCta: 'Scopri di più',
-    
+
     aboutLabel: 'Il prodotto',
     aboutTitle: 'Cosa sono le targhe di transito austriache?',
     aboutDescription1: 'Per i veicoli che non dispongono di targhe di immatricolazione valide o di un\'ispezione tecnica valida, è possibile utilizzare l\'immatricolazione di esportazione austriaca, nota anche come targhe di transito austriache.',
@@ -894,7 +901,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     aboutDescription3: 'Nota: Le richieste sono possibili esclusivamente per le aziende (società).',
     aboutDescription4: 'Queste targhe sono destinate esclusivamente alla guida dal punto A al punto B, verso o dall\'Austria. L\'immatricolazione in un altro paese non è possibile con queste targhe — per questo sono necessari i documenti originali del veicolo.',
     aboutDescription5: 'Un\'ispezione tecnica valida non è obbligatoria per il rilascio di queste targhe. La responsabilità della sicurezza e dello stato tecnico del veicolo durante il viaggio spetta sempre all\'acquirente/conducente.',
-    
+
     benefitsLabel: 'Vantaggi',
     benefitsTitle: 'Perché scegliere Transit Pro?',
     benefit1Title: 'Elaborazione rapida',
@@ -909,7 +916,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     benefit5Desc: 'Il nostro team di esperti è pronto ad aiutarti con tutte le domande e a guidarti attraverso l\'intero processo.',
     benefit6Title: 'Esperienza e affidabilità',
     benefit6Desc: 'Anni di esperienza nell\'elaborazione di targhe di transito per aziende in tutta Europa.',
-    
+
     processLabel: 'Come funziona',
     processTitle: 'Il processo in 5 semplici passi',
     processStep1Title: 'Contattaci',
@@ -922,7 +929,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     processStep4Desc: 'Elaboriamo la tua richiesta e rilasciamo le targhe di transito sulla base del numero di telaio del veicolo.',
     processStep5Title: 'Ricevi le targhe',
     processStep5Desc: 'Le targhe e la polizza assicurativa vengono spedite al tuo indirizzo lo stesso giorno in cui la richiesta viene elaborata.',
-    
+
     documentsLabel: 'Documentazione',
     documentsTitle: 'Documenti necessari per la richiesta',
     documentsDescription: 'La richiesta può essere elaborata solo quando vengono presentati i seguenti documenti. Accettiamo esclusivamente scansioni PDF chiare e leggibili:',
@@ -932,7 +939,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     doc4: 'Procura firmata dall\'acquirente',
     doc5: 'Data di inizio assicurazione desiderata (valida 21 giorni)',
     documentsNote: 'Nota: Le targhe vengono rilasciate sulla base del numero di telaio che fornisci. Pertanto, non è possibile annullare o restituire un ordine dopo che la richiesta è stata inviata.',
-    
+
     regulationsLabel: 'Regolamenti',
     regulationsTitle: 'Regolamenti e regole d\'uso',
     reg1: 'Le targhe di transito austriache possono essere richieste solo per camion, autobus e rimorchi/semirimorchi di origine europea.',
@@ -941,13 +948,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     reg4: 'Le targhe possono essere utilizzate esclusivamente per la guida verso o dall\'Austria tramite un percorso logico e ragionevolmente più breve.',
     reg5: 'Queste targhe temporanee non sono registrate nel sistema EUCARIS, pertanto in alcuni paesi possono essere effettuati controlli aggiuntivi. Consigliamo di avere sempre a portata di mano il certificato di immatricolazione originale del veicolo.',
     reg6: 'L\'uso improprio o non autorizzato può comportare provvedimenti da parte delle autorità locali. Non forniamo supporto legale in tali situazioni.',
-    
+
     pricingLabel: 'Prezzi',
     pricingTitle: 'Prezzi trasparenti',
     pricingSubtitle: 'Nessun costo nascosto — paghi solo per ciò che usi.',
-    pricingTruckTitle: 'Camion & Autobus',
+    pricingTruckTitle: 'Camion e autobus',
     pricingTruckDesc: 'Targhe di transito con assicurazione WA per camion e autobus (validità 21 giorni)',
-    pricingTrailerTitle: 'Rimorchi & Semirimorchi',
+    pricingTrailerTitle: 'Rimorchi e semirimorchi',
     pricingTrailerDesc: 'Targhe di transito con assicurazione WA per rimorchi e semirimorchi (validità 21 giorni)',
     pricingDuration: 'Validità: 21 giorni',
     pricingIncludes: 'Include:',
@@ -955,7 +962,8 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     pricingInclude2: 'Assicurazione WA',
     pricingInclude3: 'Spedizione giornaliera',
     pricingOrderBefore: 'Ordina prima delle 12:00 — elaborazione lo stesso giorno!',
-    
+    pricingOnRequest: 'Prezzo su richiesta',
+
     faqLabel: 'FAQ',
     faqTitle: 'Domande frequenti',
     faq1Q: 'Chi può richiedere le targhe di transito austriache?',
@@ -972,13 +980,13 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     faq6A: 'No, le targhe vengono rilasciate sulla base del numero di telaio del veicolo, quindi non è possibile annullare o restituire un ordine dopo che la richiesta è stata inviata.',
     faq7Q: 'Quanto velocemente posso ricevere le targhe?',
     faq7A: 'Gli ordini ricevuti prima delle 12:00 vengono elaborati lo stesso giorno lavorativo. Le targhe e la polizza assicurativa vengono spedite al tuo indirizzo lo stesso giorno.',
-    
+
     ctaTitle: 'Pronto per le targhe di transito austriache?',
     ctaSubtitle: 'Contattaci oggi e assicurati targhe di transito legali per il tuo veicolo nel minor tempo possibile.',
-    
+
     formTitle: 'Contattaci',
     formName: 'Nome completo',
-    formEmail: 'Indirizzo email',
+    formEmail: 'Indirizzo e-mail',
     formPhone: 'Telefono',
     formCompany: 'Azienda',
     formMessage: 'Messaggio',
@@ -986,7 +994,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formSuccess: 'La tua richiesta è stata inviata con successo! Ti ricontatteremo al più presto.',
     formError: 'Si è verificato un errore. Riprova.',
     formRequired: 'Questo campo è obbligatorio',
-    
+
     footerText: 'Transit Pro — Il tuo partner affidabile per le targhe di transito austriache',
     footerRights: 'Tutti i diritti riservati.',
     footerPrivacy: 'Informativa sulla privacy',
@@ -995,5 +1003,5 @@ const translations: Record<LanguageCode, TranslationKeys> = {
 };
 
 export function getTranslation(lang: LanguageCode): TranslationKeys {
-  return translations[lang] || translations.sr;
+  return translations[lang] || translations.de;
 }

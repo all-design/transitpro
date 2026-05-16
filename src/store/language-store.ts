@@ -12,7 +12,7 @@ interface LanguageStore {
 export const useLanguageStore = create<LanguageStore>()(
   persist(
     (set) => ({
-      language: 'sr' as LanguageCode,
+      language: 'de' as LanguageCode,
       setLanguage: (lang: LanguageCode) => set({ language: lang }),
     }),
     {
