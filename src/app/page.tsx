@@ -14,7 +14,6 @@ import {
   CheckCircle2,
   Phone,
   Mail,
-  MapPin,
   Menu,
   X,
   Truck,
@@ -217,12 +216,10 @@ function useStructuredData(language: LanguageCode) {
       url: SITE_URL,
       logo: `${SITE_URL}/logoTP.png`,
       image: `${SITE_URL}/og-image.png`,
-      telephone: '+43 1 234 5678',
-      email: 'info@transitpro.eu',
+      telephone: '+40 723 252 121',
+      email: 'office@transitplates.eu',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Vienna',
-        addressRegion: 'Vienna',
         addressCountry: 'AT',
       },
       geo: {
@@ -1045,11 +1042,11 @@ export default function Home() {
                           <Phone className="w-5 h-5" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white">Telefon</h3>
+                          <h3 className="font-semibold text-white">{t.contactPhone}</h3>
                           <p className="text-gray-300 text-sm mt-1" itemProp="telephone">
-                            <a href="tel:+4312345678" className="hover:text-red-400 transition-colors">+43 1 234 5678</a>
+                            <a href="tel:+40723252121" className="hover:text-red-400 transition-colors">+40 723 252 121</a>
                           </p>
-                          <p className="text-gray-400 text-xs mt-1">Mo-Fr: 08:00 - 17:00 CET</p>
+                          <p className="text-gray-400 text-xs mt-1">{t.contactPhoneHours}</p>
                         </div>
                       </div>
 
@@ -1060,25 +1057,11 @@ export default function Home() {
                           <Mail className="w-5 h-5" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white">E-Mail</h3>
+                          <h3 className="font-semibold text-white">{t.contactEmail}</h3>
                           <p className="text-gray-300 text-sm mt-1" itemProp="email">
-                            <a href="mailto:info@transitpro.eu" className="hover:text-red-400 transition-colors">info@transitpro.eu</a>
+                            <a href="mailto:office@transitplates.eu" className="hover:text-red-400 transition-colors">office@transitplates.eu</a>
                           </p>
-                          <p className="text-gray-400 text-xs mt-1">Antwort innerhalb von 24h</p>
-                        </div>
-                      </div>
-
-                      <Separator className="bg-white/10" />
-
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center flex-shrink-0" aria-hidden="true">
-                          <MapPin className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white">{language === 'de' ? 'Adresse' : language === 'en' ? 'Address' : 'Adresa'}</h3>
-                          <p className="text-gray-300 text-sm mt-1" itemProp="address">
-                            <span itemProp="addressLocality">Wien</span>, <span itemProp="addressCountry">Österreich</span>
-                          </p>
+                          <p className="text-gray-400 text-xs mt-1">{t.contactEmailResponse}</p>
                         </div>
                       </div>
                     </address>

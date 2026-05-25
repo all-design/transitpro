@@ -152,6 +152,12 @@ export type TranslationKeys = {
   seoOgDescription: string;
   seoOgImageAlt: string;
 
+  // Contact Info
+  contactPhone: string;
+  contactPhoneHours: string;
+  contactEmail: string;
+  contactEmailResponse: string;
+
   // Footer
   footerText: string;
   footerRights: string;
@@ -298,6 +304,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgDescription: 'Schnelle, zuverlässige und professionelle Abwicklung österreichischer Transitkennzeichen. Legale Durchfahrt durch die EU und viele weitere Länder.',
     seoOgImageAlt: 'Transit Pro — Österreichische Transitkennzeichen auf weißem Hintergrund',
 
+    // Contact Info
+    contactPhone: 'Telefon',
+    contactPhoneHours: 'Mo-Fr: 08:00 - 17:00 CET',
+    contactEmail: 'E-Mail',
+    contactEmailResponse: 'Antwort innerhalb von 24h',
+
     // Footer
     footerText: 'Transit Pro — Ihr zuverlässiger Partner für österreichische Transitkennzeichen',
     footerRights: 'Alle Rechte vorbehalten.',
@@ -431,6 +443,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgTitle: 'Transit Pro — Austrijske tranzitne tablice sa WA osiguranjem',
     seoOgDescription: 'Brza, pouzdana i profesionalna obrada austrijskih tranzitnih tablica. Legalna vožnja kroz EU i mnoge druge zemlje.',
     seoOgImageAlt: 'Transit Pro — Austrijske tranzitne tablice na beloj pozadini',
+
+    // Contact Info
+    contactPhone: 'Telefon',
+    contactPhoneHours: 'Po-Pe: 08:00 - 17:00 CET',
+    contactEmail: 'E-pošta',
+    contactEmailResponse: 'Odgovor u roku od 24h',
 
     // Footer
     footerText: 'Transit Pro — Vaš pouzdani partner za austrijske tranzitne tablice',
@@ -566,6 +584,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgDescription: 'Fast, reliable, and professional Austrian transit plates processing. Drive legally through the EU and many more countries.',
     seoOgImageAlt: 'Transit Pro — Austrian transit plates on white background',
 
+    // Contact Info
+    contactPhone: 'Phone',
+    contactPhoneHours: 'Mon-Fri: 08:00 - 17:00 CET',
+    contactEmail: 'Email',
+    contactEmailResponse: 'Response within 24h',
+
     // Footer
     footerText: 'Transit Pro — Your reliable partner for Austrian transit plates',
     footerRights: 'All rights reserved.',
@@ -699,6 +723,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgTitle: 'Transit Pro — Numere de tranzit austriece cu asigurare WA',
     seoOgDescription: 'Procesare rapidă, fiabilă și profesionistă a numerelor de tranzit austriece. Conducere legală prin UE și multe alte țări.',
     seoOgImageAlt: 'Transit Pro — Numere de tranzit austriece pe fond alb',
+
+    // Contact Info
+    contactPhone: 'Telefon',
+    contactPhoneHours: 'Lun-Vin: 08:00 - 17:00 CET',
+    contactEmail: 'E-mail',
+    contactEmailResponse: 'Răspuns în termen de 24h',
 
     // Footer
     footerText: 'Transit Pro — Partenerul dumneavoastră de încredere pentru numere de tranzit austriece',
@@ -834,6 +864,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgDescription: 'Бърза, надеждна и професионална обработка на австрийски транзитни табели. Законно шофиране през ЕС и много други държави.',
     seoOgImageAlt: 'Transit Pro — Австрийски транзитни табели на бял фон',
 
+    // Contact Info
+    contactPhone: 'Телефон',
+    contactPhoneHours: 'По-Пе: 08:00 - 17:00 CET',
+    contactEmail: 'Имейл',
+    contactEmailResponse: 'Отговор в рамките на 24ч',
+
     // Footer
     footerText: 'Transit Pro — Вашият надежден партньор за австрийски транзитни табели',
     footerRights: 'Всички права запазени.',
@@ -968,6 +1004,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgDescription: 'Traitement rapide, fiable et professionnel des plaques de transit autrichiennes. Conduite légale dans l\'UE et de nombreux autres pays.',
     seoOgImageAlt: 'Transit Pro — Plaques de transit autrichiennes sur fond blanc',
 
+    // Contact Info
+    contactPhone: 'Téléphone',
+    contactPhoneHours: 'Lun-Ven: 08:00 - 17:00 CET',
+    contactEmail: 'Courriel',
+    contactEmailResponse: 'Réponse sous 24h',
+
     // Footer
     footerText: 'Transit Pro — Votre partenaire de confiance pour les plaques de transit autrichiennes',
     footerRights: 'Tous droits réservés.',
@@ -1101,6 +1143,12 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     seoOgTitle: 'Transit Pro — Targhe di transito austriache con assicurazione WA',
     seoOgDescription: 'Trattazione rapida, affidabile e professionale delle targhe di transito austriache. Guida legale nell\'UE e in molti altri paesi.',
     seoOgImageAlt: 'Transit Pro — Targhe di transito austriache su sfondo bianco',
+
+    // Contact Info
+    contactPhone: 'Telefono',
+    contactPhoneHours: 'Lun-Ven: 08:00 - 17:00 CET',
+    contactEmail: 'E-mail',
+    contactEmailResponse: 'Risposta entro 24h',
 
     // Footer
     footerText: 'Transit Pro — Il tuo partner affidabile per le targhe di transito austriache',
