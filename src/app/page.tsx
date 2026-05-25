@@ -1108,7 +1108,7 @@ export default function Home() {
                           required
                           value={formData.name}
                           onChange={(e) => handleFormChange('name', e.target.value)}
-                          className="border-gray-200 focus:ring-red-500 focus:border-red-500"
+                          className="border-gray-200 focus:ring-red-500 focus:border-red-500 text-gray-900 placeholder:text-gray-400"
                           autoComplete="name"
                         />
                       </div>
@@ -1124,7 +1124,7 @@ export default function Home() {
                           required
                           value={formData.email}
                           onChange={(e) => handleFormChange('email', e.target.value)}
-                          className="border-gray-200 focus:ring-red-500 focus:border-red-500"
+                          className="border-gray-200 focus:ring-red-500 focus:border-red-500 text-gray-900 placeholder:text-gray-400"
                           autoComplete="email"
                         />
                       </div>
@@ -1139,7 +1139,7 @@ export default function Home() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleFormChange('phone', e.target.value)}
-                          className="border-gray-200 focus:ring-red-500 focus:border-red-500"
+                          className="border-gray-200 focus:ring-red-500 focus:border-red-500 text-gray-900 placeholder:text-gray-400"
                           autoComplete="tel"
                         />
                       </div>
@@ -1153,7 +1153,7 @@ export default function Home() {
                           name="company"
                           value={formData.company}
                           onChange={(e) => handleFormChange('company', e.target.value)}
-                          className="border-gray-200 focus:ring-red-500 focus:border-red-500"
+                          className="border-gray-200 focus:ring-red-500 focus:border-red-500 text-gray-900 placeholder:text-gray-400"
                           autoComplete="organization"
                         />
                       </div>
@@ -1169,7 +1169,7 @@ export default function Home() {
                         required
                         value={formData.message}
                         onChange={(e) => handleFormChange('message', e.target.value)}
-                        className="border-gray-200 focus:ring-red-500 focus:border-red-500 min-h-[120px]"
+                        className="border-gray-200 focus:ring-red-500 focus:border-red-500 text-gray-900 placeholder:text-gray-400 min-h-[120px]"
                       />
                     </div>
 
