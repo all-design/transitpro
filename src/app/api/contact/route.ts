@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,24 +22,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send email via SMTP
-    const smtpHost = process.env.SMTP_HOST;
-    const smtpPort = process.env.SMTP_PORT;
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    const resendApiKey = process.env.RESEND_API_KEY;
     const recipientEmail = process.env.CONTACT_EMAIL || 'office@transitplates.eu';
 
-    if (smtpHost && smtpUser && smtpPass) {
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: Number(smtpPort) || 587,
-        secure: Number(smtpPort) === 465,
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
-
+    if (resendApiKey) {
       const languageNames: Record<string, string> = {
         de: 'Deutsch',
         sr: 'Srpski',
@@ -89,17 +74,30 @@ export async function POST(request: NextRequest) {
         </div>
       `;
 
-      await transporter.sendMail({
-        from: `"Transit Pro Kontakt" <${smtpUser}>`,
-        to: recipientEmail,
-        replyTo: email,
-        subject: `Transit Pro — Novi upit od ${name}`,
-        html: htmlBody,
-        text: `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone || '-'}\nKompanija: ${company || '-'}\nJezik: ${languageNames[language] || language}\n\nPoruka:\n${message}`,
+      const resendResponse = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${resendApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'Transit Pro <onboarding@resend.dev>',
+          to: [recipientEmail],
+          reply_to: email,
+          subject: `Transit Pro — Novi upit od ${name}`,
+          html: htmlBody,
+          text: `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone || '-'}\nKompanija: ${company || '-'}\nJezik: ${languageNames[language] || language}\n\nPoruka:\n${message}`,
+        }),
       });
+
+      if (!resendResponse.ok) {
+        const errorData = await resendResponse.json();
+        console.error('Resend API error:', errorData);
+        // Still return success to user, but log the error
+      }
     } else {
-      // Fallback: log to console if SMTP not configured
-      console.log('Contact form submission (SMTP not configured):', {
+      // Fallback: log to console if API key not configured
+      console.log('Contact form submission (Resend not configured):', {
         name,
         email,
         phone,
