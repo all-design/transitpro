@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'Transit Pro <onboarding@resend.dev>',
+          from: 'Transit Pro <office@transitplates.eu>',
           to: [recipientEmail],
           reply_to: email,
           subject: `Transit Pro — Novi upit od ${name}`,
