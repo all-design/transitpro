@@ -293,7 +293,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Unternehmen',
     formMessage: 'Nachricht',
     formSubmit: 'Anfrage senden',
-    formSuccess: 'Ihre Anfrage wurde erfolgreich gesendet! Wir melden uns in Kürze bei Ihnen.',
+    formSuccess: 'Vielen Dank für Ihre Anfrage! Wir werden uns in Kürze per E-Mail oder Telefon bei Ihnen melden.',
     formError: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     formRequired: 'Dieses Feld ist erforderlich',
 
@@ -433,7 +433,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Kompanija',
     formMessage: 'Poruka',
     formSubmit: 'Pošaljite zahtev',
-    formSuccess: 'Vaš zahtev je uspešno poslat! Javićemo vam se u najkraćem roku.',
+    formSuccess: 'Hvala što ste poslali upit! Uskoro možete očekivati naš poziv ili odgovor putem e-pošte.',
     formError: 'Došlo je do greške. Pokušajte ponovo.',
     formRequired: 'Ovo polje je obavezno',
 
@@ -573,7 +573,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Company',
     formMessage: 'Message',
     formSubmit: 'Send Request',
-    formSuccess: 'Your request has been successfully sent! We will get back to you shortly.',
+    formSuccess: 'Thank you for your inquiry! You can expect a call or email response from us shortly.',
     formError: 'An error occurred. Please try again.',
     formRequired: 'This field is required',
 
@@ -713,7 +713,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Companie',
     formMessage: 'Mesaj',
     formSubmit: 'Trimiteți cererea',
-    formSuccess: 'Cererea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.',
+    formSuccess: 'Vă mulțumim pentru solicitare! Ne puteți aștepta un apel telefonic sau un răspuns prin e-mail în cel mai scurt timp.',
     formError: 'A apărut o eroare. Vă rugăm să încercați din nou.',
     formRequired: 'Acest câmp este obligatoriu',
 
@@ -853,7 +853,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Компания',
     formMessage: 'Съобщение',
     formSubmit: 'Изпратете заявка',
-    formSuccess: 'Вашата заявка е изпратена успешно! Ще се свържем с вас в най-кратък срок.',
+    formSuccess: 'Благодарим ви за запитването! Можете да очаквате обаждане или отговор по имейл в най-кратък срок.',
     formError: 'Възникна грешка. Моля, опитайте отново.',
     formRequired: 'Това поле е задължително',
 
@@ -993,7 +993,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Entreprise',
     formMessage: 'Message',
     formSubmit: 'Envoyer la demande',
-    formSuccess: 'Votre demande a été envoyée avec succès ! Nous vous recontacterons dans les plus brefs délais.',
+    formSuccess: 'Merci pour votre demande ! Vous pouvez vous attendre à un appel ou une réponse par e-mail sous peu.',
     formError: 'Une erreur est survenue. Veuillez réessayer.',
     formRequired: 'Ce champ est obligatoire',
 
@@ -1133,7 +1133,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
     formCompany: 'Azienda',
     formMessage: 'Messaggio',
     formSubmit: 'Invia richiesta',
-    formSuccess: 'La tua richiesta è stata inviata con successo! Ti ricontatteremo al più presto.',
+    formSuccess: 'Grazie per la tua richiesta! Puoi aspettarti una chiamata o una risposta via e-mail a breve.',
     formError: 'Si è verificato un errore. Riprova.',
     formRequired: 'Questo campo è obbligatorio',
 

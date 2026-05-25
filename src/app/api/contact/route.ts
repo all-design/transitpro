@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,17 +23,92 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // In production, you would send this email or save to database
-    // For now, we log it and return success
-    console.log('Contact form submission:', {
-      name,
-      email,
-      phone,
-      company,
-      message,
-      language,
-      timestamp: new Date().toISOString(),
-    });
+    // Send email via SMTP
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpPort = process.env.SMTP_PORT;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+    const recipientEmail = process.env.CONTACT_EMAIL || 'office@transitplates.eu';
+
+    if (smtpHost && smtpUser && smtpPass) {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: Number(smtpPort) || 587,
+        secure: Number(smtpPort) === 465,
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      });
+
+      const languageNames: Record<string, string> = {
+        de: 'Deutsch',
+        sr: 'Srpski',
+        en: 'English',
+        ro: 'Română',
+        bg: 'Български',
+        fr: 'Français',
+        it: 'Italiano',
+      };
+
+      const htmlBody = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+          <div style="background: #dc2626; color: white; padding: 16px 24px; border-radius: 8px 8px 0 0;">
+            <h2 style="margin: 0; font-size: 20px;">Transit Pro — Novi upit</h2>
+          </div>
+          <div style="background: white; padding: 24px; border-radius: 0 0 8px 8px; border: 1px solid #e5e7eb;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151; width: 120px;">Ime:</td>
+                <td style="padding: 8px 0; color: #6b7280;">${name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Email:</td>
+                <td style="padding: 8px 0; color: #6b7280;"><a href="mailto:${email}" style="color: #dc2626;">${email}</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Telefon:</td>
+                <td style="padding: 8px 0; color: #6b7280;">${phone || '-'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Kompanija:</td>
+                <td style="padding: 8px 0; color: #6b7280;">${company || '-'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Jezik:</td>
+                <td style="padding: 8px 0; color: #6b7280;">${languageNames[language] || language}</td>
+              </tr>
+            </table>
+            <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 16px 0;">
+            <p style="font-weight: bold; color: #374151; margin-bottom: 8px;">Poruka:</p>
+            <p style="color: #6b7280; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+          </div>
+          <p style="text-align: center; color: #9ca3af; font-size: 12px; margin-top: 16px;">
+            Poslato sa transitplates.eu kontakt forme
+          </p>
+        </div>
+      `;
+
+      await transporter.sendMail({
+        from: `"Transit Pro Kontakt" <${smtpUser}>`,
+        to: recipientEmail,
+        replyTo: email,
+        subject: `Transit Pro — Novi upit od ${name}`,
+        html: htmlBody,
+        text: `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone || '-'}\nKompanija: ${company || '-'}\nJezik: ${languageNames[language] || language}\n\nPoruka:\n${message}`,
+      });
+    } else {
+      // Fallback: log to console if SMTP not configured
+      console.log('Contact form submission (SMTP not configured):', {
+        name,
+        email,
+        phone,
+        company,
+        message,
+        language,
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     return NextResponse.json(
       { success: true, message: 'Request received successfully.' },
