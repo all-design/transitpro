@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     const resendApiKey = process.env.RESEND_API_KEY;
     // During domain verification, Resend only delivers to the account email.
     // Once transitplates.eu is verified, change CONTACT_EMAIL to office@transitplates.eu
-    const recipientEmail = process.env.CONTACT_EMAIL || 'costa267@gmail.com';
+    const recipientEmail = process.env.CONTACT_EMAIL || 'office@transitplates.eu';
 
     if (resendApiKey) {
       const languageNames: Record<string, string> = {
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'Transit Pro <onboarding@resend.dev>',
+          from: 'Transit Pro <office@transitplates.eu>',
           to: [recipientEmail],
           reply_to: email,
           subject: `Transit Pro — Novi upit od ${name}`,
